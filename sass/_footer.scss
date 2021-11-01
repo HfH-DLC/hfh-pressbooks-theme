@@ -1,0 +1,46 @@
+.footer {
+    background-color: var(--footer-bg);
+}
+
+.footer__pressbooks {
+    align-items: start;
+    margin: 0 32px 16px 32px;
+}
+
+.footer-hfh {
+    margin: 0 32px;
+    flex: 1 0;
+}
+
+@media screen and (min-width: 60rem) {
+    .footer__inner {
+        display: flex;
+        align-items: center;
+    }
+    .footer__pressbooks {
+        margin-bottom: 0;
+    }
+    .footer-hfh {
+        text-align: right;
+    }
+}
+
+.footer-hfh a {
+    color: #fff;
+}
+
+.footer__pressbooks__links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer__pressbooks__icon {
+    line-height: 1;
+    margin: 0 16px 0 0;
+}
+
+.footer__pressbooks__links__title {
+    margin: 0;
+}

@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+vendor
+/node_modules
+/vendor
+package-lock.json
+composer.lock
+.DS_Store
+dist
+css
+languages/*-backup-*

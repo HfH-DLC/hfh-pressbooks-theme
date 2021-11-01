@@ -1,0 +1,123 @@
+/**
+*  book.css overrides
+**/
+
+body {
+    font-family: $font-family;
+}
+
+.button,
+a.call-to-action,
+button,
+input[type=submit] {
+    font-family: $font-family
+}
+
+.block-reading-meta {
+    font-family: $font-family
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family
+}
+
+.footer {
+    font-family: $font-family
+}
+
+.header {
+    font-family: $font-family
+}
+
+@media screen and (max-width:59.975rem) {
+    .js-header-nav a {
+        font-family: $font-family
+    }
+}
+
+.section-comments {
+    font-family: $font-family
+}
+
+.toc,
+.toc ol {
+    font-family: $font-family
+}
+
+.book-header__subtitle {
+    font-family: $font-family
+}
+
+.book-header__author {
+    font-family: $font-family
+}
+
+.book-header__cover__downloads li {
+    font-family: $font-family
+}
+
+.book-header__description {
+    font-family: $font-family
+}
+
+.license-text {
+    font-family: $font-family
+}
+
+.block-info__description {
+    font-family: $font-family
+}
+
+.block-meta__subtitle {
+    font-family: $font-family
+}
+
+.reading-header {
+    font-family: $font-family
+}
+
+#content h2.page-title,
+body.page:not(.home) #content h2,
+body:not(.home) #content h2.denied-title {
+    font-family: $font-family
+}
+
+#content p.h5p-count {
+    font-family: $font-family
+}
+
+#content .h5p-pagination {
+    font-family: $font-family
+}
+
+#content .denied-text p {
+    font-family: $font-family
+}
+
+.nav-next a,
+.nav-previous a {
+    font-family: $font-family
+}
+
+.nav-reading__next a,
+.nav-reading__previous a {
+    font-family: $font-family
+}
+
+.nav-reading__up .nav-reading__up__text {
+    font-family: $font-family
+}
+
+.nav-reading--page__next,
+.nav-reading--page__previous {
+    font-family: $font-family
+}
+
+.block-toggle__cta__button {
+    color: var(--primary)
+}
