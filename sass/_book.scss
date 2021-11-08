@@ -121,3 +121,8 @@ body:not(.home) #content h2.denied-title {
 .block-toggle__cta__button {
     color: var(--primary)
 }
+
+.error404 form.search-form input,
+.header__search .header__search__form form input {
+    color: $black;
+}
