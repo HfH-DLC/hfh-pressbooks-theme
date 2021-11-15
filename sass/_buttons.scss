@@ -1,6 +1,32 @@
 #main {
-    a.call-to-action,
-    input[type="submit"] {
+    input[type='submit'] {
+        text-transform: none;
+        cursor: pointer;
+        border: 0;
+        position: relative;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        font-weight: bold;
+        text-align: left;
+        appearance: none;
+        background: $black;
+        &:hover,
+        &:focus {
+            border: 0;
+            color: #fff;
+            background: #e74011;
+            text-decoration: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    a.call-to-action {
         text-transform: none;
         cursor: pointer;
         border: 0;
