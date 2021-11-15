@@ -126,3 +126,10 @@ body:not(.home) #content h2.denied-title {
 .header__search .header__search__form form input {
     color: $black;
 }
+
+.nav-reading {
+    z-index: 1;
+    .nav-reading__up {
+        cursor: pointer;
+    }
+}
