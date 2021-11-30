@@ -1,0 +1,17 @@
+.textbox__header p {
+    margin: 0 0 0.5em 0;
+}
+
+.textbox.textbox--key-takeaways,
+.textbox--key-takeaways.bcc-box,
+.textbox.textbox--learning-objectives,
+.textbox--learning-objectives.bcc-box,
+.textbox.textbox--exercises,
+.textbox--exercises.bcc-box,
+.textbox.textbox--examples,
+.textbox--examples.bcc-box {
+    border-radius: 0;
+    .textbox__header {
+        border-radius: 0;
+    }
+}

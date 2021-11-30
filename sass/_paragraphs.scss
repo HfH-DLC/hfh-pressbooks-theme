@@ -1,5 +1,7 @@
-#main {
-    p {
-        margin: 0 0 32px 0;
-    }
+.front-matter p,
+.part p,
+.chapter p,
+.back-matter p,
+body#tinymce.wp-editor p {
+    margin: 0 0 32px 0;
 }

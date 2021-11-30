@@ -3,15 +3,15 @@
 */
 
 .site-footer {
-    margin-top: 137px;
+    padding-bottom: 6rem;
+    @media screen and (min-width: 740px) {
+        padding-bottom: 7rem;
+    }
+    @media screen and (min-width: 60rem) {
+        padding-bottom: 5rem;
+    }
     p {
         font-size: 1.25em;
-    }
-    .footer--reading {
-        padding-bottom: 8em;
-        @media screen and (min-width: 60rem) {
-            padding-bottom: 4em;
-        }
     }
     .footer-one__content,
     .footer-two__content {
@@ -72,6 +72,9 @@
                     align-items: center;
                     .footer__pressbooks__links__title {
                         font-size: 14px;
+                        a:hover {
+                            color: $orange-red;
+                        }
                     }
                 }
                 .footer-two__pressbooks__icon>svg {
@@ -102,8 +105,11 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            float: right;
+            float: left;
             max-width: 320px;
+            @media screen and (min-width: 60rem) {
+                float: right;
+            }
             li {
                 padding: 0 0 2px 2px;
                 float: left;
