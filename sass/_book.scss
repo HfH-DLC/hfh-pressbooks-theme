@@ -60,14 +60,6 @@ section.chapter header h1 span {
     text-transform: uppercase;
 }
 
-.book-header__subtitle {
-    font-family: $font-family;
-}
-
-.book-header__author {
-    font-family: $font-family;
-}
-
 .book-header {
     --primary: #{$thunderbird-red};
     --primary-dark: #{$thunderbird-red-light};
@@ -76,7 +68,51 @@ section.chapter header h1 span {
     --header-bg: #{$gray-light};
     background-color: var(--header-bg);
     color: var(--header-color);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .book-header__inner {
+        max-width: 1200px;
+        padding: 4rem 2rem;
+        box-shadow: 0 2px 4px 0 #00000026;
+        background-color: white;
+        @media screen and (min-width: 60rem) {
+            padding: 4rem 8rem 4rem 4rem;
+        }
+        &>* {
+            @media screen and (min-width: 768px) {
+                max-width: unset;
+            }
+            @media screen and (min-width: 60rem) {
+                max-width: 55%;
+            }
+        }
+    }
+    .book-header__cover {
+        align-self: flex-start;
+        margin-bottom: 0;
+        @media screen and (min-width: 768px) {
+            align-self: flex-start;
+            position: static;
+            max-width: unset;
+        }
+        @media screen and (min-width: 60rem) {
+            align-self: unset;
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            max-width: 38%;
+        }
+    }
+    .book-header__subtitle {
+        font-family: $font-family;
+    }
+    .book-header__author {
+        font-family: $font-family;
+    }
     .book-header__cover__downloads {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
         button {
             background: $black;
             color: $white;
@@ -88,14 +124,14 @@ section.chapter header h1 span {
             transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
             cursor: pointer;
             svg {
-                color: $orange-red;
+                color: $thunderbird-red-light;
             }
             &:focus,
             &:hover {
                 color: $white;
                 border-bottom-color: $white;
                 text-decoration: none;
-                background-color: $orange-red;
+                background-color: $thunderbird-red;
                 box-shadow: none;
                 outline: none;
                 svg {
@@ -104,19 +140,20 @@ section.chapter header h1 span {
             }
         }
         >ul {
-            border-top: 2px solid $orange-red;
+            border-top: 2px solid $thunderbird-red;
             li {
                 font-family: $font-family;
                 font-weight: normal;
                 color: white;
                 &:hover,
-                &:focus {
+                &:focus-within {
                     outline: none;
                     transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
                     cursor: pointer;
-                    background-color: $orange-red;
+                    background-color: $thunderbird-red;
                 }
-                a:hover {
+                a:hover,
+                a:focus {
                     text-decoration: none;
                 }
             }
@@ -185,6 +222,13 @@ body:not(.home) #content h2.denied-title {
 
 .block-toggle__cta__button {
     color: var(--primary)
+}
+
+.header__logo--img,
+.header__logo--svg {
+    @media screen and (min-width: 60rem) {
+        max-height: 45px;
+    }
 }
 
 .error404 form.search-form input,

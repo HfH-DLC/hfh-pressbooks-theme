@@ -36,10 +36,9 @@
         }
         .footer-one__address a {
             color: $white;
-            text-decoration: underline;
             &:focus,
             &:hover {
-                color: $orange-red;
+                text-decoration: underline;
             }
         }
     }
@@ -63,7 +62,7 @@
                 color: $white;
                 font-weight: bold;
                 &:hover {
-                    color: $orange-red;
+                    text-decoration: underline;
                 }
             }
             .footer-two__pressbooks {
@@ -73,7 +72,7 @@
                     .footer__pressbooks__links__title {
                         font-size: 14px;
                         a:hover {
-                            color: $orange-red;
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -124,7 +123,7 @@
                     text-decoration: none;
                     transition: background .25s ease 0s;
                     &:hover {
-                        background: $orange-red;
+                        background: $thunderbird-red;
                     }
                     &::before {
                         content: "";

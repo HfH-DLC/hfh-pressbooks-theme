@@ -1,5 +1,6 @@
 .textbox__header p {
     margin: 0 0 0.5em 0;
+    font-weight: bold;
 }
 
 .textbox.textbox--key-takeaways,
@@ -14,4 +15,20 @@
     .textbox__header {
         border-radius: 0;
     }
+}
+
+.textbox.textbox--key-takeaways {
+    border-color: var(--textbox-takeaways);
+}
+
+.textbox.textbox--examples {
+    border-color: var(--textbox-examples);
+}
+
+.textbox.textbox--learning-objectives {
+    border-color: var(--textbox-objectives);
+}
+
+.textbox.textbox--exercises {
+    border-color: var(--textbox-exercises);
 }

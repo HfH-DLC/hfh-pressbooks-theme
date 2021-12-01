@@ -25,6 +25,15 @@ add_action( 'after_setup_theme', 'hfh_pressbooks_theme_theme_setup' );
  */
 function hfh_pressbooks_theme_enqueue_scripts() {
 	wp_enqueue_style( 'hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/css/index.css', array(), HFH_PRESSBOOKS_THEME_VERSION );
+	$options    = get_option( 'pressbooks_theme_options_global' );
+	$custom_css = "
+                :root {
+                        --textbox-examples: {$options['edu_textbox_examples_header_background']};
+						--textbox-objectives: {$options['edu_textbox_objectives_header_background']};
+						--textbox-exercises: {$options['edu_textbox_exercises_header_background']};
+						--textbox-takeaways: {$options['edu_textbox_takeaways_header_background']};
+                }";
+	wp_add_inline_style( 'hfh-pressbook-theme-style-index', $custom_css );
 }
 
 add_action( 'wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11 );
@@ -40,17 +49,17 @@ function hfh_pressbooks_theme_options_global_defaults( $default_options ) {
 		$default_options,
 		array(
 			'edu_textbox_examples_header_color'        => '#FFF',
-			'edu_textbox_examples_header_background'   => '#005999',
+			'edu_textbox_examples_header_background'   => '#427ca4',
 			'edu_textbox_examples_background'          => '#dbeffd',
 			'edu_textbox_exercises_header_color'       => '#FFF',
 			'edu_textbox_exercises_header_background'  => '#BE1925',
 			'edu_textbox_exercises_background'         => '#F8E8E9',
 			'edu_textbox_objectives_header_color'      => '#FFF',
-			'edu_textbox_objectives_header_background' => '#306100',
-			'edu_textbox_objectives_background'        => '#e2edc7',
+			'edu_textbox_objectives_header_background' => '#57751c',
+			'edu_textbox_objectives_background'        => '#eef5e0',
 			'edu_textbox_takeaways_header_color'       => '#FFF',
-			'edu_textbox_takeaways_header_background'  => '#5F37AE',
-			'edu_textbox_takeaways_background'         => '#f1ebff',
+			'edu_textbox_takeaways_header_background'  => '#14776c',
+			'edu_textbox_takeaways_background'         => '#ecf9f7',
 		)
 	);
 }
