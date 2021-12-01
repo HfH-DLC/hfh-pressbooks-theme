@@ -69,9 +69,15 @@ global $multipage;
 					<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( esc_html__( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
 				</div>
 			</div>
-			<div class="footer-two__privacy">
-					<?php the_privacy_policy_link(); ?>
-			</div>
+			<?php 
+			switch_to_blog( get_main_site_id() );
+			if ( '' !== get_privacy_policy_url() ) {
+				echo '<div class="footer-two__privacy">';
+				the_privacy_policy_link();
+				echo '</div>';
+			}
+			restore_current_blog();
+			?>
 		</div>
 	</div>
 </footer><!-- .footer -->
