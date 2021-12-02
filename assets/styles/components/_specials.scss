@@ -1,7 +1,17 @@
 // Special Elements
-
+$learning-objectives-header-color: #fff !default;
+$learning-objectives-background: #eef5e0 !default;
+$learning-objectives-header-background: #57751c !default;
+$key-takeaways-header-color: #fff !default;
+$key-takeaways-background: #ecf9f7 !default;
+$key-takeaways-header-background: #14776c !default;
+$exercises-header-color: #fff !default;
+$exercises-background: #F8E8E9 !default;
+$exercises-header-background: #BE1925 !default;
+$examples-header-color: #fff !default;
+$examples-background: #dbeffd !default;
+$examples-header-background: #427ca4 !default;
 // Override variables above this line, using the !default flag to allow further overrides.
 @import 'variables/specials';
-
 // Add custom SCSS below these imports and includes.
 @import 'components/specials';
