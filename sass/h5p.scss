@@ -1,0 +1,49 @@
+@import "colors";
+@import "fonts";
+html.h5p-iframe,
+html.h5p-iframe>body {
+    /*
+    * Colors
+    */
+    .h5peditor .ui-dialog .h5p-joubelui-button,
+    .h5peditor .h5p-joubelui-button,
+    .h5p-joubelui-button {
+        background-color: $thunderbird-red;
+        &:hover,
+        &:focus {
+            background-color: $thunderbird-red-light;
+        }
+    }
+    .h5p-joubelui-button:active {
+        box-shadow: inset 0 4px 0px #7b0e16;
+    }
+    .joubel-simple-rounded-button {
+        background-color: $thunderbird-red;
+        &:hover,
+        &:focus {
+            background-color: $thunderbird-red-light;
+        }
+        &:active {
+            box-shadow: inset 0 4px 0px #7b0e16;
+        }
+        &[aria-disabled="true"] {
+            background-color: #ccc;
+        }
+    }
+    .h5p-documentation-tool-page .page-help-text {
+        color: $thunderbird-red;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    /*
+    * Fonts
+    */
+    * {
+        font-family: $font-family;
+    }
+    .h5p-text-input,
+    .h5p-text-input-field .h5p-text-input-field-textfield {
+        font-family: $font-family;
+    }
+}
