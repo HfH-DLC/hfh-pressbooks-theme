@@ -78,3 +78,15 @@ add_filter(
 	'hfh_pressbooks_theme_options_global_defaults',
 	11
 );
+
+/**
+ * Loads css for H5P.
+ * 
+ * @param array $styles The array of css files to be loaded.
+ */
+function hfh_pressbooks_theme_alter_styles( &$styles ) {
+	$styles[] = (object) array(
+		'path'    => get_stylesheet_directory_uri() . '/css/h5p.css',
+	);
+}
+add_action( 'h5p_alter_library_styles', 'hfh_pressbooks_theme_alter_styles', 10, 3 );
