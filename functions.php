@@ -38,6 +38,15 @@ function hfh_pressbooks_theme_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11 );
 
+/**
+ * Add editor styles
+ */
+function hfh_pressbooks_theme_add_editor_styles() {
+	add_editor_style( 'css/editor.css' );
+}
+
+add_action( 'after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles' );
+
 
 /**
  * Changes default colors for the different textboxes
