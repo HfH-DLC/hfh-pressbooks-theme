@@ -1,8 +1,15 @@
-main {
+#main,
+body#tinymce.wp-editor {
     a {
         text-decoration: none;
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+body#tinymce.wp-editor {
+    a {
+        color: var(--primary);
     }
 }
