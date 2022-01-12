@@ -11,6 +11,8 @@ if ( ! defined( 'HFH_PRESSBOOKS_THEME_VERSION' ) ) {
 	define( 'HFH_PRESSBOOKS_THEME_VERSION', '0.1.0' );
 }
 
+require_once 'inc/class-book.php';
+
 /**
  * Initial theme setup.
  */
