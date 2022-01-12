@@ -1,0 +1,11 @@
+#main,
+body#tinymce.wp-editor {
+    ol,
+    ul {
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        li:last-child {
+            margin-bottom: 1em;
+        }
+    }
+}

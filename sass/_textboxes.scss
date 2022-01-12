@@ -1,35 +1,42 @@
-.textbox__header p {
-    margin: 0 0 0.5em 0;
-    font-weight: bold;
-}
-
-.textbox.textbox--key-takeaways,
-.textbox--key-takeaways.bcc-box,
-.textbox.textbox--learning-objectives,
-.textbox--learning-objectives.bcc-box,
-.textbox.textbox--exercises,
-.textbox--exercises.bcc-box,
-.textbox.textbox--examples,
-.textbox--examples.bcc-box {
-    border-width: 2px;
-    border-radius: 0;
-    .textbox__header {
-        border-radius: 0;
+#main,
+body#tinymce.wp-editor {
+    .textbox {
+        margin-top: 1.5em;
+        margin-bottom: 2em;
     }
-}
-
-.textbox.textbox--key-takeaways {
-    border-color: var(--textbox-takeaways);
-}
-
-.textbox.textbox--examples {
-    border-color: var(--textbox-examples);
-}
-
-.textbox.textbox--learning-objectives {
-    border-color: var(--textbox-objectives);
-}
-
-.textbox.textbox--exercises {
-    border-color: var(--textbox-exercises);
+    .textbox__header p {
+        margin: 0 0 0.5em 0;
+        font-weight: bold;
+    }
+    .textbox__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .textbox.textbox--key-takeaways,
+    .textbox--key-takeaways.bcc-box,
+    .textbox.textbox--learning-objectives,
+    .textbox--learning-objectives.bcc-box,
+    .textbox.textbox--exercises,
+    .textbox--exercises.bcc-box,
+    .textbox.textbox--examples,
+    .textbox--examples.bcc-box {
+        border-width: 2px;
+        border-radius: 0;
+        .textbox__header {
+            border-radius: 0;
+        }
+    }
+    .textbox.textbox--key-takeaways {
+        border-color: var(--textbox-takeaways);
+    }
+    .textbox.textbox--examples {
+        border-color: var(--textbox-examples);
+    }
+    .textbox.textbox--learning-objectives {
+        border-color: var(--textbox-objectives);
+    }
+    .textbox.textbox--exercises {
+        border-color: var(--textbox-exercises);
+    }
 }

@@ -25,6 +25,7 @@ h4,
 h5,
 h6 {
     font-family: $font-family;
+    text-transform: none;
 }
 
 .footer {
@@ -54,10 +55,15 @@ section.chapter header h1 span {
     font-family: $font-family;
 }
 
+.toc__toggle button,
+.toc__title__container button {
+    cursor: pointer;
+    text-transform: none;
+}
+
 .toc__part>.toc__title__container,
 .toc__part>.toc__title {
     font-weight: normal;
-    text-transform: uppercase;
 }
 
 .book-header {

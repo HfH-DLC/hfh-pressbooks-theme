@@ -36,10 +36,19 @@ html.h5p-iframe>body {
             text-decoration: underline;
         }
     }
+    .progress-dot {
+        &.current {
+            background: $thunderbird-red;
+        }
+        &.answered {
+            background: $fantasy-dark;
+        }
+    }
     /*
     * Fonts
     */
-    * {
+    font-family: $font-family;
+    .h5p-joubelui-button {
         font-family: $font-family;
     }
     .h5p-text-input,

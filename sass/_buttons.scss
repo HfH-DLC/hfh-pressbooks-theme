@@ -1,6 +1,11 @@
 #main {
-    input[type='submit'] {
+    .button,
+    a.call-to-action,
+    button,
+    input[type=submit] {
         text-transform: none;
+    }
+    input[type='submit'] {
         cursor: pointer;
         border: 0;
         position: relative;
@@ -27,7 +32,6 @@
         }
     }
     a.call-to-action {
-        text-transform: none;
         cursor: pointer;
         border: 0;
         position: relative;

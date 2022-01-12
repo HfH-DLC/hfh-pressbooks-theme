@@ -2,10 +2,16 @@
 body#tinymce.wp-editor {
     a {
         text-decoration: none;
+        //font-weight: bold;
         &:hover {
             text-decoration: underline;
+            color: $thunderbird-red-light;
         }
     }
+}
+
+#main .nav-reading a:hover {
+    color: var(--primary-fg)
 }
 
 body#tinymce.wp-editor {
