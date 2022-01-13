@@ -84,7 +84,7 @@ use function \Pressbooks\Image\attachment_id_from_url;
 			</div>
 		</div>
 
-		<div class="book-header__column">
+		<div class="book-header__column book-header__info">
 		<?php \PressbooksBook\Helpers\get_links( false ); ?>
 		<h1 class="section__title book-header__title">
 			<span class="screen-reader-text"><?php _e( 'Book Title', 'pressbooks-book' ); ?>: </span><?php bloginfo( 'name' ); ?>

@@ -5,7 +5,8 @@ body#tinymce.wp-editor {
         border: 0;
         border-collapse: collapse;
     }
-    table td {
+    table td,
+    table tbody th {
         border-top: 2px solid $fantasy-plain;
         border-left: 0;
         border-right: 0;
@@ -22,7 +23,7 @@ body#tinymce.wp-editor {
             line-height: 1.2857142857;
         }
     }
-    table th {
+    table thead th {
         border: 0;
         vertical-align: top;
         text-align: left;
@@ -33,25 +34,25 @@ body#tinymce.wp-editor {
         color: #BE1925;
     }
     @media screen and (max-width: 740px) {
-        table th {
+        table thead th {
             font-size: 12px;
             line-height: 1.6666666667;
         }
     }
-    table th[scope="col"] {
+    table thead th[scope="col"] {
         padding: 0 40px 3px 0;
     }
     @media screen and (max-width: 740px) {
-        table th[scope="col"] {
+        table thead th[scope="col"] {
             padding-right: 16px;
         }
     }
-    table th[scope="row"] {
+    table thead th[scope="row"] {
         border-top: 2px solid $fantasy-plain;
         padding: 15px 40px 40px 0;
     }
     @media screen and (max-width: 740px) {
-        table th[scope="row"] {
+        table thead th[scope="row"] {
             padding: 12px 16px 24px 0;
         }
     }

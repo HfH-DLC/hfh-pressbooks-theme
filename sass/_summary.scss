@@ -1,0 +1,41 @@
+#main,
+body#tinymce.wp-editor {
+    summary {
+        cursor: pointer;
+        margin-bottom: 2px;
+        font-size: 14px;
+        line-height: 1.7142857143;
+        font-weight: bold;
+        font-style: normal;
+        text-transform: uppercase;
+        color: $thunderbird-red;
+        &:hover {
+            color: $thunderbird-red-light;
+        }
+        margin: 0.5em 0 0.75em 0;
+    }
+    summary::marker {
+        content: "";
+    }
+    summary::after {
+        content: "►";
+        position: absolute;
+        font-weight: bold;
+        transition: all 0.25s;
+        margin-left: 0.3rem;
+    }
+    summary.plus::after {
+        content: "+";
+        font-size: 1.75em;
+        font-weight: bold;
+        transition: all 0.25s;
+        margin-top: -0.8rem;
+        margin-left: 0.3rem;
+    }
+    details[open] summary::after {
+        transform: rotate(90deg);
+    }
+    details[open] summary.plus::after {
+        transform: translate(3px, 1px) rotate(45deg)
+    }
+}

@@ -194,6 +194,13 @@ section.chapter header h1 span {
     display: none;
     @media screen and (min-width: 768px) {
         display: block;
+        flex: 1;
+    }
+}
+
+.book-header__info {
+    @media screen and (min-width: 768px) {
+        flex: 2;
     }
 }
 
