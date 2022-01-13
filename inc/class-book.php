@@ -79,12 +79,12 @@ class Book {
 		}
 		$has_heading_shortcode = has_shortcode( $parent->post_content, 'heading' );
 		if ( stripos( $parent->post_content, '<h2' ) === false && $has_heading_shortcode === false ) {
-			// No <h1> or [heading] shortcode, nothing to do
+			// No <h2> or [heading] shortcode, nothing to do
 			return false;
 		}
 
 		if ( $has_heading_shortcode ) {
-			// Only render heading shortcode into <h1> if we have to
+			// Only render heading shortcode into <h2> if we have to
 			$content = \Pressbooks\Utility\do_shortcode_by_tags( $parent->post_content, array( 'heading' ) );
 			$content = strip_shortcodes( $content );
 		} else {
