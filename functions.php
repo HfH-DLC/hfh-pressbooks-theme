@@ -36,6 +36,15 @@ function hfh_pressbooks_theme_enqueue_scripts() {
 						--textbox-takeaways: {$options['edu_textbox_takeaways_header_background']};
                 }";
 	wp_add_inline_style( 'hfh-pressbook-theme-style-index', $custom_css );
+
+	if ( ! is_front_page() ) {
+		$web_options = get_option( 'pressbooks_theme_options_web' );
+		if ( isset( $web_options['collapse_sections'] ) && absint( $web_options['collapse_sections'] ) === 1 ) {
+			wp_dequeue_script( 'pressbooks/collapse-sections' );
+			wp_deregister_script( 'pressbooks/collapse-sections' );
+			wp_enqueue_script( 'pressbooks/collapse-sections', get_stylesheet_directory_uri() . '/js/collapse-sections.js', array(), HFH_PRESSBOOKS_THEME_VERSION, true );
+		}
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11 );
