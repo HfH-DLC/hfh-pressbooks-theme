@@ -1,5 +1,15 @@
 #main,
 body#tinymce.wp-editor {
+    details {
+        margin: 0.5em 0 0.75em 0;
+        &>p:first-child,
+        &>summary:first-child+p {
+            margin-top: 0;
+        }
+        p {
+            margin: 0.35em 0;
+        }
+    }
     summary {
         cursor: pointer;
         margin-bottom: 2px;
@@ -12,7 +22,6 @@ body#tinymce.wp-editor {
         &:hover {
             color: $thunderbird-red-light;
         }
-        margin: 0.5em 0 0.75em 0;
     }
     summary::marker {
         content: "";
