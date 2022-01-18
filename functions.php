@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HfH Pressbooks Theme functions and definitions
  * 
@@ -6,9 +7,9 @@
  * @license GPL 2.0+
  */
 
-if ( ! defined( 'HFH_PRESSBOOKS_THEME_VERSION' ) ) {
+if (!defined('HFH_PRESSBOOKS_THEME_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( 'HFH_PRESSBOOKS_THEME_VERSION', '0.1.0' );
+	define('HFH_PRESSBOOKS_THEME_VERSION', '0.1.0');
 }
 
 require_once 'inc/class-book.php';
@@ -16,18 +17,20 @@ require_once 'inc/class-book.php';
 /**
  * Initial theme setup.
  */
-function hfh_pressbooks_theme_theme_setup() {
+function hfh_pressbooks_theme_theme_setup()
+{
 	// Add theme support for special features here.
 }
 
-add_action( 'after_setup_theme', 'hfh_pressbooks_theme_theme_setup' );
+add_action('after_setup_theme', 'hfh_pressbooks_theme_theme_setup');
 
 /**
  * Enqueue scripts and styles.
  */
-function hfh_pressbooks_theme_enqueue_scripts() {
-	wp_enqueue_style( 'hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/css/index.css', array(), HFH_PRESSBOOKS_THEME_VERSION );
-	$options    = get_option( 'pressbooks_theme_options_global' );
+function hfh_pressbooks_theme_enqueue_scripts()
+{
+	wp_enqueue_style('hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/css/index.css', array(), HFH_PRESSBOOKS_THEME_VERSION);
+	$options    = get_option('pressbooks_theme_options_global');
 	$custom_css = "
                 :root {
                         --textbox-examples: {$options['edu_textbox_examples_header_background']};
@@ -35,28 +38,29 @@ function hfh_pressbooks_theme_enqueue_scripts() {
 						--textbox-exercises: {$options['edu_textbox_exercises_header_background']};
 						--textbox-takeaways: {$options['edu_textbox_takeaways_header_background']};
                 }";
-	wp_add_inline_style( 'hfh-pressbook-theme-style-index', $custom_css );
+	wp_add_inline_style('hfh-pressbook-theme-style-index', $custom_css);
 
-	if ( ! is_front_page() ) {
-		$web_options = get_option( 'pressbooks_theme_options_web' );
-		if ( isset( $web_options['collapse_sections'] ) && absint( $web_options['collapse_sections'] ) === 1 ) {
-			wp_dequeue_script( 'pressbooks/collapse-sections' );
-			wp_deregister_script( 'pressbooks/collapse-sections' );
-			wp_enqueue_script( 'pressbooks/collapse-sections', get_stylesheet_directory_uri() . '/js/collapse-sections.js', array(), HFH_PRESSBOOKS_THEME_VERSION, true );
+	if (!is_front_page()) {
+		$web_options = get_option('pressbooks_theme_options_web');
+		if (isset($web_options['collapse_sections']) && absint($web_options['collapse_sections']) === 1) {
+			wp_dequeue_script('pressbooks/collapse-sections');
+			wp_deregister_script('pressbooks/collapse-sections');
+			wp_enqueue_script('pressbooks/collapse-sections', get_stylesheet_directory_uri() . '/js/collapse-sections.js', array(), HFH_PRESSBOOKS_THEME_VERSION, true);
 		}
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11 );
+add_action('wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11);
 
 /**
  * Add editor styles
  */
-function hfh_pressbooks_theme_add_editor_styles() {
-	add_editor_style( 'css/editor.css' );
+function hfh_pressbooks_theme_add_editor_styles()
+{
+	add_editor_style('css/editor.css');
 }
 
-add_action( 'after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles' );
+add_action('after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles');
 
 
 /**
@@ -64,7 +68,8 @@ add_action( 'after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles' );
  * 
  * @param array $default_options The default theme options.
  */
-function hfh_pressbooks_theme_options_global_defaults( $default_options ) {
+function hfh_pressbooks_theme_options_global_defaults($default_options)
+{
 	return array_merge(
 		$default_options,
 		array(
@@ -95,9 +100,22 @@ add_filter(
  * 
  * @param array $styles The array of css files to be loaded.
  */
-function hfh_pressbooks_theme_alter_styles( &$styles ) {
+function hfh_pressbooks_theme_alter_styles(&$styles)
+{
 	$styles[] = (object) array(
 		'path'    => get_stylesheet_directory_uri() . '/css/h5p.css',
 	);
 }
-add_action( 'h5p_alter_library_styles', 'hfh_pressbooks_theme_alter_styles', 10, 3 );
+add_action('h5p_alter_library_styles', 'hfh_pressbooks_theme_alter_styles', 10, 3);
+
+/**
+ * Removes the h1 option from the richtext editor
+ * 
+ * @param array $args the array of arguments.
+ */
+function hfh_pressbooks_theme_remove_h1($args)
+{
+	$args['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Pre=pre';
+	return $args;
+}
+add_filter('tiny_mce_before_init', 'hfh_pressbooks_theme_remove_h1');
