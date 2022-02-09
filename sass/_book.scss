@@ -280,3 +280,29 @@ body:not(.home) #content h2.denied-title {
         cursor: pointer;
     }
 }
+
+.reading-header__title {
+    text-transform: none;
+}
+
+.reading-header__toc .reading-header__toc__title button {
+    text-transform: none;
+}
+
+.block-meta__subtitle {
+    margin-top: 2.2em;
+    margin-bottom: 1.1em;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 1px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #be1925;
+    font-size: 1rem;
+    line-height: 1.6666666667;
+    @media screen and (min-width: 740px) {
+        line-height: 1.5;
+    }
+}
