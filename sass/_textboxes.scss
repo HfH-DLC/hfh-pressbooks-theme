@@ -29,14 +29,54 @@ body#tinymce.wp-editor {
     }
     .textbox.textbox--key-takeaways {
         border-color: var(--textbox-takeaways);
+        a {
+            color: var(--textbox-takeaways);
+            &:hover {
+                color: var(--textbox-takeaways);
+            }
+        }
+        hr {
+            border-color: var(--textbox-takeaways);
+            opacity: 0.5;
+        }
     }
     .textbox.textbox--examples {
         border-color: var(--textbox-examples);
+        a {
+            color: var(--textbox-examples);
+            &:hover {
+                color: var(--textbox-examples);
+            }
+        }
+        hr {
+            border-color: var(--textbox-examples);
+            opacity: 0.5;
+        }
     }
     .textbox.textbox--learning-objectives {
         border-color: var(--textbox-objectives);
+        a {
+            color: var(--textbox-objectives);
+            &:hover {
+                color: var(--textbox-objectives);
+            }
+        }
+        hr {
+            border-color: var(--textbox-objectives);
+            opacity: 0.5;
+        }
     }
     .textbox.textbox--exercises {
         border-color: var(--textbox-exercises);
+        a {
+            color: var(--textbox-exercises);
+            &:hover {
+                color: var(--textbox-exercises);
+            }
+        }
+        hr {
+            border-color: var(--textbox-exercises);
+            opacity: 0.5;
+        }
     }
 }
