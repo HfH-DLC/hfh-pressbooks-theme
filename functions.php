@@ -119,3 +119,10 @@ function hfh_pressbooks_theme_remove_h1($args)
 	return $args;
 }
 add_filter('tiny_mce_before_init', 'hfh_pressbooks_theme_remove_h1');
+
+
+function custom_excerpt_more($more)
+{
+	return ' [&hellip;]';
+}
+add_filter('excerpt_more', 'custom_excerpt_more', 11);
