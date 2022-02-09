@@ -4,24 +4,21 @@ body#tinymce.wp-editor {
     blockquote p,
     .chapter blockquote,
     .chapter blockquote p {
-        /*  margin: 32px 0;
-         font-size: 32px; */
-        font-size: larger;
+        font-size: 1rem;
         line-height: 1.25;
         font-weight: normal;
     }
     blockquote p,
     .chapter blockquote p {
         border-left: 0.15em solid lightgrey;
-        padding-left: 10px;
+        padding: 0 15px;
+        margin: 2rem 15px;
     }
     @media screen and (max-width: 740px) {
         blockquote,
         blockquote p,
         .chapter blockquote,
         .front-matter blockquote {
-            /*    margin: 26px 0;
-           font-size: 24px;  */
             font-size: 20px;
             line-height: 1.3333333333;
         }
