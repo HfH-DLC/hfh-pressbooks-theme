@@ -8,6 +8,9 @@ body#tinymce.wp-editor {
             color: $thunderbird-red-light;
         }
     }
+    .site-content a {
+        color: $thunderbird-red;
+    }
 }
 
 #main .nav-reading a:hover {
