@@ -1,11 +1,33 @@
 #main,
 body#tinymce.wp-editor {
-    ol,
-    ul {
+     :not(li)>ol,
+     :not(li)>ul {
+        line-height: 1.25rem;
         margin-top: 0.7em;
-        margin-bottom: 0.7em;
-        li:last-child {
-            margin-bottom: 1em;
+        margin-bottom: 1em;
+        >li {
+            margin-top: 0.5em;
+        }
+        &>li>ul,
+        &>li>ol {
+            line-height: 1.25rem;
+            margin-top: 0.35em;
+            margin-bottom: 0.5em;
+            >li {
+                margin-top: 0.25em;
+            }
+            &>li ul,
+            &>li ol {
+                line-height: 1.25rem;
+                margin-top: 0;
+                margin-bottom: 0.25em;
+                >li {
+                    margin-top: 0.125em;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
         }
     }
 }
