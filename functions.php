@@ -137,3 +137,16 @@ function hfh_remove_protected_text()
 }
 
 add_filter('protected_title_format', 'hfh_pressbooks_theme_remove_protected_text');
+
+/**
+ * Tag the subsections, used instead of pressbooks pb_tag_subsections
+ *
+ * @param $content string
+ *
+ * @return string
+ */
+function hfh_tag_subsections($content, $id)
+{
+	$tagged_content = \HfH_Pressbooks_Theme\Book::tagSubsections($content, $id);
+	return ($tagged_content === false) ? $content : $tagged_content;
+}
