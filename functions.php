@@ -74,7 +74,7 @@ function hfh_pressbooks_theme_options_global_defaults($default_options)
 		$default_options,
 		array(
 			'edu_textbox_examples_header_color'        => '#FFF',
-			'edu_textbox_examples_header_background'   => '#427ca4',
+			'edu_textbox_examples_header_background'   => '#3a6f92',
 			'edu_textbox_examples_background'          => '#dbeffd',
 			'edu_textbox_exercises_header_color'       => '#FFF',
 			'edu_textbox_exercises_header_background'  => '#BE1925',
