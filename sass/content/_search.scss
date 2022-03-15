@@ -1,0 +1,13 @@
+.hfh-search-term {
+    font-weight: bold;
+    background-color: $fantasy-plain;
+}
+
+.search-results {
+    a.entry-summary {
+        color: $black;
+        &:hover {
+            color: $thunderbird-red-light;
+        }
+    }
+}
