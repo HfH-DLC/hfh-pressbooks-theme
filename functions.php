@@ -127,13 +127,9 @@ function custom_excerpt_more($more)
 }
 add_filter('excerpt_more', 'custom_excerpt_more', 11);
 
-function hfh_remove_protected_text()
+function hfh_pressbooks_theme_remove_protected_text()
 {
-	if (post_password_required()) {
-		return __('Protected: %s');
-	} else {
-		return __('%s');
-	}
+	return '%s';
 }
 
 add_filter('protected_title_format', 'hfh_pressbooks_theme_remove_protected_text');
