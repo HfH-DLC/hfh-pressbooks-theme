@@ -1,0 +1,18 @@
+@media print {
+    .header__nav {
+        display: none;
+    }
+    .reading-header__toc {
+        display: none;
+    }
+    #page .nav-reading {
+        display: none;
+    }
+    .book-header__cta,
+    .book-header__share,
+    .toc__toggle,
+    .footer-one__social,
+    .footer-two__pressbooks__icon {
+        display: none;
+    }
+}
