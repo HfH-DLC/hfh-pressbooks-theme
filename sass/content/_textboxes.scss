@@ -26,6 +26,14 @@
     border-radius: 0;
     .textbox__header {
         border-radius: 0;
+        a {
+            color: $white;
+            text-decoration: underline;
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
     }
 }
 
