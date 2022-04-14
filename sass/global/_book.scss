@@ -25,6 +25,13 @@ body {
             font-family: $font-family;
         }
     }
+    section.front-matter header [data-type='author'],
+    section.back-matter header [data-type='author'],
+    section.chapter header [data-type='author'] {
+        font-weight: normal;
+        text-transform: none;
+        text-align: left;
+    }
     section.chapter header h1 span {
         display: inline;
     }
@@ -87,6 +94,9 @@ body {
                     align-self: flex-start;
                     position: static;
                     max-width: unset;
+                }
+                img {
+                    border: thin solid #DCDCDC;
                 }
                 .book-header__cover__downloads {
                     margin-top: 1.5rem;
