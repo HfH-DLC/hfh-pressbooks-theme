@@ -16,7 +16,7 @@ jobs:
       - name: Generate version strings
         id: versionstrings
         run: |
-          echo "::set-output name=plugin_version::$(perl -n -e'/^ \* Version:\s*(\d.\d.\d)/ && print $1' style.css)"
+          echo "::set-output name=plugin_version::$(perl -n -e'/^Version:\s*(\d.\d.\d)/ && print $1' style.css)"
           PACKAGE_JSON_VERSION=$(npm pkg get version | sed 's/"//g')
           echo "Version: $PACKAGE_VERSION"
           echo "::set-output name=package_json_version::$PACKAGE_JSON_VERSION"
