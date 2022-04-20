@@ -25,6 +25,7 @@ jobs:
           core.setFailed('Plugin version not set')
     - name: build
       run: |
+          npm i
           npm run bundle
     - uses:  softprops/action-gh-release@v1
       with:
