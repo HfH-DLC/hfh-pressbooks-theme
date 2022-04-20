@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Generate version string
       id: versionstrings
-      run: echo "::set-output name=plugin_version::$(perl -n -e'/^ \* Version:\s*(\d.\d.\d)/ && print $1' hfh-shibboleth.php)"
+      run: echo "::set-output name=plugin_version::$(perl -n -e'/^ \* Version:\s*(\d.\d.\d)/ && print $1' style.css)"
     - name: Check if version strings are set
       if:  ${{ !steps.versionstrings.outputs.plugin_version}}
       uses: actions/github-script@v3
