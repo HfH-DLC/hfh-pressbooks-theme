@@ -1,7 +1,8 @@
 body#tinymce.wp-editor,
 #main .front-matter,
 #main .chapter,
-#main .back-matter {
+#main .back-matter,
+#main .part {
     @import "blockquotes";
     @import "headings";
     @import "hr";
