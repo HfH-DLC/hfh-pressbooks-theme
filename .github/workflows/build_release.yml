@@ -27,10 +27,11 @@ jobs:
       run: |
           npm i
           npm run bundle
+          tar -czvf dist.tar.gz ./dist
     - uses:  softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.versionstrings.outputs.plugin_version}}
         name: ${{ steps.versionstrings.outputs.plugin_version}}
         draft: false
         prerelease: false
-        files: ./dist
+        files: dist.tar.gz
