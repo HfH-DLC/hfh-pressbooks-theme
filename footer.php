@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Footer template.
  *
@@ -6,7 +7,7 @@
  */
 
 ?>
-<?php if ( ! is_single() ) { ?>
+<?php if (!is_single()) { ?>
 	</div><!-- #content -->
 <?php } ?>
 </main>
@@ -16,19 +17,20 @@ global $multipage;
 
 
 <footer class="site-footer">
-<div class="footer-one">
+	<div class="footer-one">
 		<div class="footer-one__content">
-		<img width="300" height="49" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/footer-logo-2x.png' ); ?>">
-		<div class="footer-one__address">
-			<p>Schaffhauserstrasse 239<br>
-				Postfach 5850<br>
-				CH-8050 Zürich</p>
-			<p>T +41 44 317 11 11<br>
-			<a href="mailto:info@hfh.ch">info@hfh.ch</a></p>
-		</div>
+			<img width="300" height="49" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/images/footer-logo-2x.png'); ?>" alt="Interkantonale Hochschule für Heilpädagogik">
+			<div class="footer-one__address">
+				<p>Schaffhauserstrasse 239<br>
+					Postfach 5850<br>
+					CH-8050 Zürich</p>
+				<p>T +41 44 317 11 11<br>
+					<a href="mailto:info@hfh.ch">info@hfh.ch</a>
+				</p>
+			</div>
 
-		<div class="footer-one__social">
-				<nav role="navigation" >
+			<div class="footer-one__social">
+				<nav role="navigation">
 					<ul>
 						<li>
 							<a href="https://www.facebook.com/hfh.edu" target="_blank" rel="nofollow" class="facebook">facebook</a>
@@ -56,7 +58,7 @@ global $multipage;
 	<div class="footer-two">
 		<div class="footer-two__content">
 			<div class="footer-two__copyright">
-				<?php echo 'Copyright HfH ' . esc_html( date( 'Y' ) ); ?>
+				<?php echo 'Copyright HfH ' . esc_html(date('Y')); ?>
 			</div>
 			<div class="footer-two__pressbooks">
 				<div class="footer-two__pressbooks__links">
@@ -66,12 +68,12 @@ global $multipage;
 						</svg>
 					</a>
 					<?php /* translators: %s: Pressbooks */ ?>
-					<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf( esc_html__( 'Powered by %s', 'pressbooks-book' ), '<span class="pressbooks">Pressbooks</span>' ); ?></a></p>
+					<p class="footer__pressbooks__links__title"><a href="https://pressbooks.com"><?php printf(esc_html__('Powered by %s', 'pressbooks-book'), '<span class="pressbooks">Pressbooks</span>'); ?></a></p>
 				</div>
 			</div>
-			<?php 
-			switch_to_blog( get_main_site_id() );
-			if ( '' !== get_privacy_policy_url() ) {
+			<?php
+			switch_to_blog(get_main_site_id());
+			if ('' !== get_privacy_policy_url()) {
 				echo '<div class="footer-two__privacy">';
 				the_privacy_policy_link();
 				echo '</div>';
@@ -84,4 +86,5 @@ global $multipage;
 <?php wp_footer(); ?>
 </div>
 </body>
+
 </html>
