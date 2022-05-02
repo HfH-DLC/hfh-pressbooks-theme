@@ -46,7 +46,7 @@
         color: $white;
         padding: 30px 0;
         .footer-two__content {
-            font-size: 14px;
+            font-size: 0.875rem;
             line-height: 1.4285714286;
             display: grid;
             grid-gap: 1em;
@@ -70,7 +70,7 @@
                     display: flex;
                     align-items: center;
                     .footer__pressbooks__links__title {
-                        font-size: 14px;
+                        font-size: 0.875rem;
                         a:hover {
                             text-decoration: underline;
                         }
