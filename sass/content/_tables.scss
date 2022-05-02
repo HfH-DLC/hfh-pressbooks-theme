@@ -12,14 +12,14 @@ table tbody th {
     border-bottom: 0;
     vertical-align: top;
     text-align: left;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
 @media screen and (max-width: 740px) {
     table td {
         padding: 12px 16px 24px 0;
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.2857142857;
     }
 }
@@ -28,7 +28,7 @@ table thead th {
     border: 0;
     vertical-align: top;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.7142857143;
     font-weight: bold;
     text-transform: uppercase;
@@ -37,7 +37,7 @@ table thead th {
 
 @media screen and (max-width: 740px) {
     table thead th {
-        font-size: 12px;
+        font-size: 0.75rem;
         line-height: 1.6666666667;
     }
 }
@@ -71,4 +71,8 @@ table caption {
     /* color: #373d3f; */
     color: unset;
     caption-side: top;
+}
+
+table p {
+    font-size: inherit;
 }
