@@ -21,8 +21,7 @@
         text-align: left;
         appearance: none;
         background: $black;
-        &:hover,
-        &:focus {
+        &:hover {
             border: 0;
             color: #fff;
             background: $thunderbird-red;
