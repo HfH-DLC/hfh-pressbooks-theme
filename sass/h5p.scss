@@ -1,230 +1,301 @@
 @import "global/colors";
 @import "global/fonts";
 html.h5p-iframe,
-html.h5p-iframe>body {
-    .h5peditor .ui-dialog .h5p-joubelui-button,
-    .h5peditor .h5p-joubelui-button,
-    .h5p-joubelui-button {
-        background-color: $thunderbird-red;
-        &:hover,
-        &:focus {
-            background-color: $thunderbird-red-light;
-        }
+html.h5p-iframe > body {
+  .h5peditor .ui-dialog .h5p-joubelui-button,
+  .h5peditor .h5p-joubelui-button,
+  .h5p-joubelui-button {
+    background-color: $thunderbird-red;
+    &:hover,
+    &:focus {
+      background-color: $thunderbird-red-light;
     }
-    .h5p-joubelui-button:active {
-        box-shadow: inset 0 4px 0px #7b0e16;
+  }
+  .h5p-joubelui-button:active {
+    box-shadow: inset 0 4px 0px #7b0e16;
+  }
+  .joubel-simple-rounded-button {
+    background-color: $thunderbird-red;
+    &:hover,
+    &:focus {
+      background-color: $thunderbird-red-light;
     }
-    .joubel-simple-rounded-button {
-        background-color: $thunderbird-red;
-        &:hover,
-        &:focus {
-            background-color: $thunderbird-red-light;
-        }
-        &:active {
-            box-shadow: inset 0 4px 0px #7b0e16;
-        }
-        &[aria-disabled="true"] {
-            background-color: #ccc;
-        }
+    &:active {
+      box-shadow: inset 0 4px 0px #7b0e16;
     }
-    .h5p-documentation-tool-page .page-help-text {
-        color: $thunderbird-red;
-        &:hover {
-            text-decoration: underline;
-        }
+    &[aria-disabled="true"] {
+      background-color: #ccc;
     }
-    .progress-dot {
-        &.current {
-            background: $thunderbird-red;
-        }
-        &.answered {
-            background: $fantasy-dark;
-        }
+  }
+  .h5p-documentation-tool-page .page-help-text {
+    color: $thunderbird-red;
+    &:hover {
+      text-decoration: underline;
     }
+  }
+  .progress-dot {
+    &.current {
+      background: $thunderbird-red;
+    }
+    &.answered {
+      background: $fantasy-dark;
+    }
+  }
+  font-family: $font-family;
+  .h5p-joubelui-button {
     font-family: $font-family;
-    .h5p-joubelui-button {
-        font-family: $font-family;
-    }
-    .h5p-text-input,
-    .h5p-text-input-field .h5p-text-input-field-textfield {
-        font-family: $font-family;
-    }
-    /*
+  }
+  .h5p-text-input,
+  .h5p-text-input-field .h5p-text-input-field-textfield {
+    font-family: $font-family;
+  }
+  /*
     * Timeline
     */
-    .vco-storyjs {
-        font-family: $font-family;
+  .vco-storyjs {
+    font-family: $font-family;
+  }
+  .vco-storyjs .twitter,
+  .vco-storyjs .vcard,
+  .vco-storyjs .messege,
+  .vco-storyjs .credit,
+  .vco-storyjs .caption,
+  .vco-storyjs .zoom-in,
+  .vco-storyjs .zoom-out,
+  .vco-storyjs .back-home,
+  .vco-storyjs .time-interval div,
+  .vco-storyjs .time-interval-major div,
+  .vco-storyjs .nav-container {
+    font-family: $font-family !important;
+  }
+  .vco-storyjs h1.date,
+  .vco-storyjs h2.date,
+  .vco-storyjs h3.date,
+  .vco-storyjs h4.date,
+  .vco-storyjs h5.date,
+  .vco-storyjs h6.date {
+    font-family: $font-family !important;
+  }
+  .vco-storyjs .timenav h1,
+  .vco-storyjs .flag-content h1,
+  .vco-storyjs .era h1,
+  .vco-storyjs .timenav h2,
+  .vco-storyjs .flag-content h2,
+  .vco-storyjs .era h2,
+  .vco-storyjs .timenav h3,
+  .vco-storyjs .flag-content h3,
+  .vco-storyjs .era h3,
+  .vco-storyjs .timenav h4,
+  .vco-storyjs .flag-content h4,
+  .vco-storyjs .era h4,
+  .vco-storyjs .timenav h5,
+  .vco-storyjs .flag-content h5,
+  .vco-storyjs .era h5,
+  .vco-storyjs .timenav h6,
+  .vco-storyjs .flag-content h6,
+  .vco-storyjs .era h6 {
+    font-family: $font-family !important;
+  }
+  .vco-storyjs p,
+  .vco-storyjs blockquote,
+  .vco-storyjs blockquote p,
+  .vco-storyjs .twitter blockquote p {
+    font-family: $font-family !important;
+  }
+  .vco-storyjs .vco-feature h1,
+  .vco-storyjs .vco-feature h2,
+  .vco-storyjs .vco-feature h3,
+  .vco-storyjs .vco-feature h4,
+  .vco-storyjs .vco-feature h5,
+  .vco-storyjs .vco-feature h6 {
+    font-family: $font-family;
+  }
+  .timeline-tooltip {
+    font-family: $font-family;
+  }
+  .vco-storyjs h3 .active,
+  .vco-storyjs h4 .active,
+  .vco-storyjs h5 .active,
+  .vco-storyjs h6 .active {
+    color: $thunderbird-red;
+  }
+  .vco-notouch
+    .vco-slider
+    .slider-item
+    .content
+    .content-container
+    .media
+    .media-container
+    .wikipedia
+    h4
+    a:hover {
+    color: $thunderbird-red;
+  }
+  .vco-slider
+    .slider-item
+    .content
+    .content-container
+    .media
+    .media-wrapper
+    .media-container
+    .map
+    .map-attribution
+    .attribution-text {
+    font-family: $font-family;
+  }
+  .vco-slider
+    .slider-item
+    .content
+    .content-container
+    .googleplus
+    .proflinkPrefix {
+    color: $thunderbird-red;
+  }
+  .vco-storyjs a {
+    color: $thunderbird-red;
+  }
+  .vco-storyjs a:hover {
+    color: $thunderbird-red-light;
+    text-decoration: underline;
+  }
+  .vco-notouch .vco-navigation .vco-toolbar .zoom-in:hover,
+  .vco-notouch .vco-navigation .vco-toolbar .zoom-out:hover,
+  .vco-notouch .vco-navigation .vco-toolbar .back-home:hover {
+    color: $thunderbird-red;
+  }
+  .vco-notouch
+    .vco-navigation
+    .timenav
+    .content
+    .marker.active:hover
+    .flag
+    .flag-content
+    h3,
+  .vco-notouch
+    .vco-navigation
+    .timenav
+    .content
+    .marker.active:hover
+    .flag-small
+    .flag-content
+    h3 {
+    color: $thunderbird-red;
+  }
+  .vco-timeline .vco-navigation .timenav-background .timenav-line {
+    background-color: $thunderbird-red;
+  }
+  .vco-timeline .vco-navigation .timenav .content .marker.active .dot {
+    background: $thunderbird-red;
+  }
+  .vco-timeline .vco-navigation .timenav .content .marker.active .line {
+    background: $thunderbird-red;
+  }
+  .vco-timeline
+    .vco-navigation
+    .timenav
+    .content
+    .marker.active
+    .line
+    .event-line {
+    background: $thunderbird-red;
+  }
+  .vco-timeline
+    .vco-navigation
+    .timenav
+    .content
+    .marker.active
+    .flag
+    .flag-content
+    h3,
+  .vco-timeline
+    .vco-navigation
+    .timenav
+    .content
+    .marker.active
+    .flag-small
+    .flag-content
+    h3 {
+    color: $thunderbird-red;
+  }
+  .vco-timeline .vco-navigation .timenav .content .marker .line .event-line {
+    background: $thunderbird-red;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era1 div {
+    background: #c40;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era1 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era1 div h4 {
+    color: rgba(204, 68, 0, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .content .era2 div {
+    background: #c02;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era2 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era2 div h4 {
+    color: rgba(204, 0, 34, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .content .era3 div {
+    background: #02c;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era3 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era3 div h4 {
+    color: rgba(0, 34, 204, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .content .era4 div {
+    background: #ca0;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era4 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era4 div h4 {
+    color: rgba(204, 170, 0, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .content .era5 div {
+    background: #0ca;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era5 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era5 div h4 {
+    color: rgba(0, 204, 170, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .content .era6 div {
+    background: #08c;
+  }
+  .vco-timeline .vco-navigation .timenav .content .era6 div h3,
+  .vco-timeline .vco-navigation .timenav .content .era6 div h4 {
+    color: rgba(0, 136, 204, 0.35);
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era1 {
+    color: #c40;
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era2 {
+    color: #c02;
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era3 {
+    color: #02c;
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era4 {
+    color: #ca0;
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era5 {
+    color: #0ca;
+  }
+  .vco-timeline .vco-navigation .timenav .time .time-interval .era6 {
+    color: #08c;
+  }
+  //Question
+  .h5p-question-feedback {
+    color: $thunderbird-red;
+  }
+
+  .h5p-advent-calendar a {
+    &,
+    &:visited,
+    &:active {
+      color: $thunderbird-red;
+      text-decoration: none;
     }
-    .vco-storyjs .twitter,
-    .vco-storyjs .vcard,
-    .vco-storyjs .messege,
-    .vco-storyjs .credit,
-    .vco-storyjs .caption,
-    .vco-storyjs .zoom-in,
-    .vco-storyjs .zoom-out,
-    .vco-storyjs .back-home,
-    .vco-storyjs .time-interval div,
-    .vco-storyjs .time-interval-major div,
-    .vco-storyjs .nav-container {
-        font-family: $font-family !important;
+    &:hover,
+    &:focus-visible {
+      color: $thunderbird-red-light;
+      text-decoration: underline;
     }
-    .vco-storyjs h1.date,
-    .vco-storyjs h2.date,
-    .vco-storyjs h3.date,
-    .vco-storyjs h4.date,
-    .vco-storyjs h5.date,
-    .vco-storyjs h6.date {
-        font-family: $font-family !important;
-    }
-    .vco-storyjs .timenav h1,
-    .vco-storyjs .flag-content h1,
-    .vco-storyjs .era h1,
-    .vco-storyjs .timenav h2,
-    .vco-storyjs .flag-content h2,
-    .vco-storyjs .era h2,
-    .vco-storyjs .timenav h3,
-    .vco-storyjs .flag-content h3,
-    .vco-storyjs .era h3,
-    .vco-storyjs .timenav h4,
-    .vco-storyjs .flag-content h4,
-    .vco-storyjs .era h4,
-    .vco-storyjs .timenav h5,
-    .vco-storyjs .flag-content h5,
-    .vco-storyjs .era h5,
-    .vco-storyjs .timenav h6,
-    .vco-storyjs .flag-content h6,
-    .vco-storyjs .era h6 {
-        font-family: $font-family !important;
-    }
-    .vco-storyjs p,
-    .vco-storyjs blockquote,
-    .vco-storyjs blockquote p,
-    .vco-storyjs .twitter blockquote p {
-        font-family: $font-family !important;
-    }
-    .vco-storyjs .vco-feature h1,
-    .vco-storyjs .vco-feature h2,
-    .vco-storyjs .vco-feature h3,
-    .vco-storyjs .vco-feature h4,
-    .vco-storyjs .vco-feature h5,
-    .vco-storyjs .vco-feature h6 {
-        font-family: $font-family;
-    }
-    .timeline-tooltip {
-        font-family: $font-family;
-    }
-    .vco-storyjs h3 .active,
-    .vco-storyjs h4 .active,
-    .vco-storyjs h5 .active,
-    .vco-storyjs h6 .active {
-        color: $thunderbird-red;
-    }
-    .vco-notouch .vco-slider .slider-item .content .content-container .media .media-container .wikipedia h4 a:hover {
-        color: $thunderbird-red;
-    }
-    .vco-slider .slider-item .content .content-container .media .media-wrapper .media-container .map .map-attribution .attribution-text {
-        font-family: $font-family;
-    }
-    .vco-slider .slider-item .content .content-container .googleplus .proflinkPrefix {
-        color: $thunderbird-red;
-    }
-    .vco-storyjs a {
-        color: $thunderbird-red;
-    }
-    .vco-storyjs a:hover {
-        color: $thunderbird-red-light;
-        text-decoration: underline;
-    }
-    .vco-notouch .vco-navigation .vco-toolbar .zoom-in:hover,
-    .vco-notouch .vco-navigation .vco-toolbar .zoom-out:hover,
-    .vco-notouch .vco-navigation .vco-toolbar .back-home:hover {
-        color: $thunderbird-red;
-    }
-    .vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag .flag-content h3,
-    .vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag-small .flag-content h3 {
-        color: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav-background .timenav-line {
-        background-color: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .marker.active .dot {
-        background: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .marker.active .line {
-        background: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .marker.active .line .event-line {
-        background: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .marker.active .flag .flag-content h3,
-    .vco-timeline .vco-navigation .timenav .content .marker.active .flag-small .flag-content h3 {
-        color: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .marker .line .event-line {
-        background: $thunderbird-red;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era1 div {
-        background: #c40;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era1 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era1 div h4 {
-        color: rgba(204, 68, 0, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .content .era2 div {
-        background: #c02;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era2 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era2 div h4 {
-        color: rgba(204, 0, 34, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .content .era3 div {
-        background: #02c;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era3 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era3 div h4 {
-        color: rgba(0, 34, 204, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .content .era4 div {
-        background: #ca0;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era4 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era4 div h4 {
-        color: rgba(204, 170, 0, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .content .era5 div {
-        background: #0ca;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era5 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era5 div h4 {
-        color: rgba(0, 204, 170, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .content .era6 div {
-        background: #08c;
-    }
-    .vco-timeline .vco-navigation .timenav .content .era6 div h3,
-    .vco-timeline .vco-navigation .timenav .content .era6 div h4 {
-        color: rgba(0, 136, 204, 0.35);
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era1 {
-        color: #c40;
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era2 {
-        color: #c02;
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era3 {
-        color: #02c;
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era4 {
-        color: #ca0;
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era5 {
-        color: #0ca;
-    }
-    .vco-timeline .vco-navigation .timenav .time .time-interval .era6 {
-        color: #08c;
-    }
-    //Question
-    .h5p-question-feedback {
-        color: $thunderbird-red;
-    }
+  }
 }
