@@ -283,4 +283,49 @@ body {
             text-decoration: none;
         }
     }
+    h2:before {
+        content: none;
+    }
+}
+
+body:not(.home) {
+    #page #main #content {
+        padding-inline: 1rem;
+    }
+}
+
+#content .toc .toc__title__container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#content .toc .toc__title__container>span {
+    flex: 1;
+}
+
+#content .toc .toc__title__container>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#content .toc .toc__title__container>span p.toc__title {
+    flex: 1;
+}
+
+.toc__title {
+    display: inline;
+    margin-top: 0;
+}
+
+.toc [class*="--full"]>.toc__title__container>p>span,
+.toc [class*="--full"]>.toc__title__container>span {
+    padding-left: 0.5rem;
+    text-indent: 0;
+}
+
+.toc [class*="--empty"]>.toc__title__container {
+    padding-left: 0.5rem;
+    text-indent: 0;
 }
