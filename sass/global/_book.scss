@@ -295,16 +295,6 @@ body:not(.home) {
   }
 }
 
-#content .toc .toc__title__container {
-  display: flex;
-  align-items: start;
-  gap: 0.5rem;
-}
-
-#content .toc .toc__title__container > span {
-  flex: 1;
-}
-
 .toc__title {
   display: inline;
   margin-top: 0;
