@@ -3,329 +3,320 @@
 **/
 
 body {
-    font-family: $font-family;
-    ;
+  font-family: $font-family;
 }
 
 #page {
-    .button,
-    a.call-to-action,
-    button,
-    input[type=submit] {
-        font-family: $font-family;
+  .button,
+  a.call-to-action,
+  button,
+  input[type="submit"] {
+    font-family: $font-family;
+  }
+  .block-reading-meta {
+    font-family: $font-family;
+  }
+  .header {
+    font-family: $font-family;
+  }
+  @media screen and (max-width: 59.975rem) {
+    .js-header-nav a {
+      font-family: $font-family;
     }
-    .block-reading-meta {
-        font-family: $font-family;
+  }
+  section.front-matter header [data-type="author"],
+  section.back-matter header [data-type="author"],
+  section.chapter header [data-type="author"] {
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+  }
+  section.chapter header h1 span {
+    display: inline;
+  }
+  .section-comments {
+    font-family: $font-family;
+  }
+  .toc,
+  .toc ol {
+    font-family: $font-family;
+  }
+  .toc__toggle button,
+  .toc__title__container button {
+    cursor: pointer;
+    text-transform: none;
+  }
+  .toc__part > .toc__title__container,
+  .toc__part > .toc__title {
+    font-weight: normal;
+  }
+  .book-header {
+    --primary: #{$thunderbird-red};
+    --primary-dark: #{$thunderbird-red-light};
+    --accent: #{$fantasy-plain};
+    --header-color: #{$black};
+    --header-bg: #{$gray-light};
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    padding-left: 0;
+    padding-right: 0;
+    @media screen and (min-width: 768px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
-    .header {
-        font-family: $font-family;
-    }
-    @media screen and (max-width:59.975rem) {
-        .js-header-nav a {
-            font-family: $font-family;
-        }
-    }
-    section.front-matter header [data-type='author'],
-    section.back-matter header [data-type='author'],
-    section.chapter header [data-type='author'] {
-        font-weight: normal;
-        text-transform: none;
-        text-align: left;
-    }
-    section.chapter header h1 span {
-        display: inline;
-    }
-    .section-comments {
-        font-family: $font-family;
-    }
-    .toc,
-    .toc ol {
-        font-family: $font-family;
-    }
-    .toc__toggle button,
-    .toc__title__container button {
-        cursor: pointer;
-        text-transform: none;
-    }
-    .toc__part>.toc__title__container,
-    .toc__part>.toc__title {
-        font-weight: normal;
-    }
-    .book-header {
-        --primary: #{$thunderbird-red};
-        --primary-dark: #{$thunderbird-red-light};
-        --accent: #{$fantasy-plain};
-        --header-color: #{$black};
-        --header-bg: #{$gray-light};
-        background-color: var(--header-bg);
-        color: var(--header-color);
-        padding-left: 0;
-        padding-right: 0;
+    .book-header__inner {
+      max-width: 1200px;
+      padding: 4rem 2rem;
+      box-shadow: 0 2px 4px 0 #00000026;
+      background-color: white;
+      @media screen and (min-width: 60rem) {
+        padding: 4rem 8rem 4rem 4rem;
+      }
+      & > * {
         @media screen and (min-width: 768px) {
-            padding-left: 2rem;
-            padding-right: 2rem;
+          max-width: unset;
         }
-        .book-header__inner {
-            max-width: 1200px;
-            padding: 4rem 2rem;
-            box-shadow: 0 2px 4px 0 #00000026;
-            background-color: white;
-            @media screen and (min-width: 60rem) {
-                padding: 4rem 8rem 4rem 4rem;
-            }
-            &>* {
-                @media screen and (min-width: 768px) {
-                    max-width: unset;
-                }
-            }
-            .book-header__columns {
-                display: block;
-                @media screen and (min-width: 768px) {
-                    display: flex;
-                    gap: 2rem;
-                    justify-content: space-between;
-                    flex-direction: row-reverse;
-                }
-            }
-            .book-header__cover {
-                align-self: flex-start;
-                margin-bottom: 0;
-                @media screen and (min-width: 768px) {
-                    align-self: flex-start;
-                    position: static;
-                    max-width: unset;
-                }
-                img {
-                    border: thin solid #DCDCDC;
-                }
-                .book-header__cover__downloads {
-                    margin-top: 1.5rem;
-                    margin-bottom: 0;
-                    padding-bottom: 0;
-                    button {
-                        background: $black;
-                        color: $white;
-                        border-bottom: none;
-                        font-weight: bold;
-                        font-size: 1rem;
-                        line-height: 1.5rem;
-                        padding: 1rem 1.5rem;
-                        transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
-                        cursor: pointer;
-                        svg {
-                            color: $thunderbird-red-light;
-                        }
-                        &:focus,
-                        &:hover {
-                            color: $white;
-                            border-bottom-color: $white;
-                            text-decoration: none;
-                            background-color: $thunderbird-red;
-                            box-shadow: none;
-                            outline: none;
-                            svg {
-                                color: $white;
-                            }
-                        }
-                    }
-                    >ul {
-                        border-top: 2px solid $thunderbird-red;
-                        margin: 0;
-                        li {
-                            margin: 0;
-                            font-family: $font-family;
-                            font-weight: normal;
-                            color: white;
-                            &:hover,
-                            &:focus-within {
-                                outline: none;
-                                transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
-                                cursor: pointer;
-                                background-color: $thunderbird-red;
-                            }
-                            a:hover,
-                            a:focus {
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-            .book-header__subtitle {
-                font-family: $font-family;
-            }
-            .book-header__author {
-                font-family: $font-family;
-            }
-            .book-header__description {
-                font-family: $font-family;
-            }
-            .book-header__license {
-                flex-direction: column;
-                @media screen and (min-width: 768px) {
-                    flex-direction: row;
-                }
-            }
-            .book-header__cta {
-                .call-to-action {
-                    min-width: unset;
-                }
-            }
-        }
-    }
-    .book-header__xs {
+      }
+      .book-header__columns {
+        display: block;
         @media screen and (min-width: 768px) {
-            display: none;
+          display: flex;
+          gap: 2rem;
+          justify-content: space-between;
+          flex-direction: row-reverse;
         }
-    }
-    .book-header__md {
-        display: none;
-        @media screen and (min-width: 768px) {
-            display: block;
-            flex: 1;
-        }
-    }
-    .book-header__info {
-        @media screen and (min-width: 768px) {
-            flex: 2;
-        }
-    }
-    .license-text {
-        font-family: $font-family;
-        font-weight: normal;
-    }
-    .block-info__description {
-        font-family: $font-family;
-    }
-    .block-meta__subtitle {
-        font-family: $font-family;
-    }
-    .reading-header {
-        font-family: $font-family;
-    }
-    #content h2.page-title,
-    body.page:not(.home) #content h2,
-    body:not(.home) #content h2.denied-title {
-        font-family: $font-family;
-    }
-    #content p.h5p-count {
-        font-family: $font-family;
-    }
-    #content .h5p-pagination {
-        font-family: $font-family;
-    }
-    #content .denied-text p {
-        font-family: $font-family;
-    }
-    .nav-next a,
-    .nav-previous a {
-        font-family: $font-family;
-    }
-    .nav-reading__next a,
-    .nav-reading__previous a {
-        font-family: $font-family;
-    }
-    .nav-reading__up .nav-reading__up__text {
-        font-family: $font-family;
-    }
-    .nav-reading--page__next,
-    .nav-reading--page__previous {
-        font-family: $font-family;
-    }
-    .block-toggle__cta__button {
-        color: var(--primary)
-    }
-    .header__logo--img,
-    .header__logo--svg {
-        @media screen and (min-width: 60rem) {
-            max-height: 45px;
-        }
-    }
-    .error404 form.search-form input,
-    .header__search .header__search__form form input {
-        color: $black;
-    }
-    .nav-reading {
-        z-index: 1;
-        .nav-reading__up {
-            cursor: pointer;
-        }
-    }
-    .reading-header__title {
-        text-transform: none;
-    }
-    .reading-header__toc .reading-header__toc__title button {
-        text-transform: none;
-    }
-    .block-meta__subtitle {
-        margin-top: 2.2em;
-        margin-bottom: 1.1em;
-        display: inline-block;
-        vertical-align: top;
-        border-bottom: 2px solid currentColor;
-        padding-bottom: 1px;
-        font-weight: bold;
-        font-style: normal;
-        text-transform: uppercase;
-        color: #be1925;
-        font-size: 1rem;
-        line-height: 1.6666666667;
-        @media screen and (min-width: 740px) {
-            line-height: 1.5;
-        }
-    }
-    .dropdown>p {
+      }
+      .book-header__cover {
+        align-self: flex-start;
         margin-bottom: 0;
-    }
-    .dropdown-item {
-        a {
-            color: white;
-            text-decoration: none;
+        @media screen and (min-width: 768px) {
+          align-self: flex-start;
+          position: static;
+          max-width: unset;
         }
+        img {
+          border: thin solid #dcdcdc;
+        }
+        .book-header__cover__downloads {
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          button {
+            background: $black;
+            color: $white;
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.25s ease 0s, color 0.25s ease 0s,
+              padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
+            cursor: pointer;
+            svg {
+              color: $thunderbird-red-light;
+            }
+            &:focus,
+            &:hover {
+              color: $white;
+              border-bottom-color: $white;
+              text-decoration: none;
+              background-color: $thunderbird-red;
+              box-shadow: none;
+              outline: none;
+              svg {
+                color: $white;
+              }
+            }
+          }
+          > ul {
+            border-top: 2px solid $thunderbird-red;
+            margin: 0;
+            li {
+              margin: 0;
+              font-family: $font-family;
+              font-weight: normal;
+              color: white;
+              &:hover,
+              &:focus-within {
+                outline: none;
+                transition: background-color 0.25s ease 0s, color 0.25s ease 0s,
+                  padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
+                cursor: pointer;
+                background-color: $thunderbird-red;
+              }
+              a:hover,
+              a:focus {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      .book-header__subtitle {
+        font-family: $font-family;
+      }
+      .book-header__author {
+        font-family: $font-family;
+      }
+      .book-header__description {
+        font-family: $font-family;
+      }
+      .book-header__license {
+        flex-direction: column;
+        @media screen and (min-width: 768px) {
+          flex-direction: row;
+        }
+      }
+      .book-header__cta {
+        .call-to-action {
+          min-width: unset;
+        }
+      }
     }
-    h2:before {
-        content: none;
+  }
+  .book-header__xs {
+    @media screen and (min-width: 768px) {
+      display: none;
     }
+  }
+  .book-header__md {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      flex: 1;
+    }
+  }
+  .book-header__info {
+    @media screen and (min-width: 768px) {
+      flex: 2;
+    }
+  }
+  .license-text {
+    font-family: $font-family;
+    font-weight: normal;
+  }
+  .block-info__description {
+    font-family: $font-family;
+  }
+  .block-meta__subtitle {
+    font-family: $font-family;
+  }
+  .reading-header {
+    font-family: $font-family;
+  }
+  #content h2.page-title,
+  body.page:not(.home) #content h2,
+  body:not(.home) #content h2.denied-title {
+    font-family: $font-family;
+  }
+  #content p.h5p-count {
+    font-family: $font-family;
+  }
+  #content .h5p-pagination {
+    font-family: $font-family;
+  }
+  #content .denied-text p {
+    font-family: $font-family;
+  }
+  .nav-next a,
+  .nav-previous a {
+    font-family: $font-family;
+  }
+  .nav-reading__next a,
+  .nav-reading__previous a {
+    font-family: $font-family;
+  }
+  .nav-reading__up .nav-reading__up__text {
+    font-family: $font-family;
+  }
+  .nav-reading--page__next,
+  .nav-reading--page__previous {
+    font-family: $font-family;
+  }
+  .block-toggle__cta__button {
+    color: var(--primary);
+  }
+  .header__logo--img,
+  .header__logo--svg {
+    @media screen and (min-width: 60rem) {
+      max-height: 45px;
+    }
+  }
+  .error404 form.search-form input,
+  .header__search .header__search__form form input {
+    color: $black;
+  }
+  .nav-reading {
+    z-index: 1;
+    .nav-reading__up {
+      cursor: pointer;
+    }
+  }
+  .reading-header__title {
+    text-transform: none;
+  }
+  .reading-header__toc .reading-header__toc__title button {
+    text-transform: none;
+  }
+  .block-meta__subtitle {
+    margin-top: 2.2em;
+    margin-bottom: 1.1em;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 1px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #be1925;
+    font-size: 1rem;
+    line-height: 1.6666666667;
+    @media screen and (min-width: 740px) {
+      line-height: 1.5;
+    }
+  }
+  .dropdown > p {
+    margin-bottom: 0;
+  }
+  .dropdown-item {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  h2:before {
+    content: none;
+  }
 }
 
 body:not(.home) {
-    #page #main #content {
-        padding-inline: 1rem;
-    }
+  #page #main #content {
+    padding-inline: 1rem;
+  }
 }
 
 #content .toc .toc__title__container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
 }
 
-#content .toc .toc__title__container>span {
-    flex: 1;
-}
-
-#content .toc .toc__title__container>span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-#content .toc .toc__title__container>span p.toc__title {
-    flex: 1;
+#content .toc .toc__title__container > span {
+  flex: 1;
 }
 
 .toc__title {
-    display: inline;
-    margin-top: 0;
+  display: inline;
+  margin-top: 0;
 }
 
-.toc [class*="--full"]>.toc__title__container>p>span,
-.toc [class*="--full"]>.toc__title__container>span {
-    padding-left: 0.5rem;
-    text-indent: 0;
+.toc [class*="--full"] > .toc__title__container > p > span,
+.toc [class*="--full"] > .toc__title__container > span {
+  padding-left: 0.5rem;
+  text-indent: 0;
 }
 
-.toc [class*="--empty"]>.toc__title__container {
-    padding-left: 0.5rem;
-    text-indent: 0;
+.toc [class*="--empty"] > .toc__title__container {
+  padding-left: 0.5rem;
+  text-indent: 0;
 }
