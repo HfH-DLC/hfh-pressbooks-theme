@@ -2,9 +2,8 @@ name: Build & Release
 
 on:
   push:
-    branches: [ main ]
-    paths-ignore:
-      .github/**
+    branches: [main]
+    paths-ignore: .github/**
   workflow_dispatch:
 
 jobs:
@@ -13,27 +12,27 @@ jobs:
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v3
-    - name: Generate version string
-      id: versionstrings
-      run: echo "plugin_version=$(perl -n -e'/^Version:\s*(\d+.\d+.\d+)/ && print $1' style.css)" >> $GITHUB_OUTPUT
-    - name: Check if version strings are set
-      if:  ${{ !steps.versionstrings.outputs.plugin_version}}
-      uses: actions/github-script@v3
-      with:
-        script: |
-          core.setFailed('Plugin version not set')
-    - name: Create a .npmrc file for the github private repository
+      - uses: actions/checkout@v3
+      - name: Generate version string
+        id: versionstrings
+        run: echo "plugin_version=$(perl -n -e'/^Version:\s*(\d+.\d+.\d+)/ && print $1' style.css)" >> $GITHUB_OUTPUT
+      - name: Check if version strings are set
+        if: ${{ !steps.versionstrings.outputs.plugin_version}}
+        uses: actions/github-script@v3
+        with:
+          script: |
+            core.setFailed('Plugin version not set')
+      - name: Create a .npmrc file for the github private repository
         run: |
           echo "${{ secrets.NPMRC }}" >> .npmrc
-    - name: build
-      run: |
+      - name: build
+        run: |
           npm i
           npm run bundle
-    - uses:  softprops/action-gh-release@v1
-      with:
-        tag_name: ${{ steps.versionstrings.outputs.plugin_version}}
-        name: ${{ steps.versionstrings.outputs.plugin_version}}
-        draft: false
-        prerelease: false
-        files: ./dist/*.zip
+      - uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.versionstrings.outputs.plugin_version}}
+          name: ${{ steps.versionstrings.outputs.plugin_version}}
+          draft: false
+          prerelease: false
+          files: ./dist/*.zip
