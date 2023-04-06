@@ -1,0 +1,15 @@
+.hfh-search-term {
+  font-weight: bold;
+  background-color: var(--c-fantasy-plain);
+  padding-inline: 0.125rem;
+}
+
+.search-results {
+  a.hfh-teaser {
+    &:hover {
+      .hfh-search-term {
+        color: var(--c-black);
+      }
+    }
+  }
+}

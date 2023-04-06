@@ -1,0 +1,6 @@
+.single #page #main .site-content,
+body#tinymce.wp-editor {
+  a {
+    @extend a, .hfh-link, .hfh-link--default;
+  }
+}

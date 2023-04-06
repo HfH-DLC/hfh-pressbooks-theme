@@ -29,7 +29,7 @@ add_action('after_setup_theme', 'hfh_pressbooks_theme_theme_setup');
  */
 function hfh_pressbooks_theme_enqueue_scripts()
 {
-	wp_enqueue_style('hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/css/index.css', array(), HFH_PRESSBOOKS_THEME_VERSION);
+	wp_enqueue_style('hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/dist/main.css', array(), HFH_PRESSBOOKS_THEME_VERSION);
 	$options    = get_option('pressbooks_theme_options_global');
 	$custom_css = "
                 :root {
@@ -57,7 +57,7 @@ add_action('wp_enqueue_scripts', 'hfh_pressbooks_theme_enqueue_scripts', 11);
  */
 function hfh_pressbooks_theme_add_editor_styles()
 {
-	add_editor_style('css/editor.css');
+	add_editor_style('dist/editor.css');
 }
 
 add_action('after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles');
@@ -103,7 +103,7 @@ add_filter(
 function hfh_pressbooks_theme_alter_styles(&$styles)
 {
 	$styles[] = (object) array(
-		'path'    => get_stylesheet_directory_uri() . '/css/h5p.css',
+		'path'    => get_stylesheet_directory_uri() . '/dist/h5p.css',
 	);
 }
 add_action('h5p_alter_library_styles', 'hfh_pressbooks_theme_alter_styles', 10, 3);

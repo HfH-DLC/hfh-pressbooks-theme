@@ -1,3 +1,5 @@
+@import "/node_modules/@hfh-dlc/hfh-styleguide/dist/style";
+
 @import "global/fonts";
 @import "global/colors";
 @import "global/links";
@@ -5,7 +7,8 @@
 @import "global/footer";
 @import "global/buttons";
 @import "content/index";
-//import book overrides last 
+@import "global/search";
+//import book overrides last
 @import "global/book";
 //print styles
 @import "global/print";

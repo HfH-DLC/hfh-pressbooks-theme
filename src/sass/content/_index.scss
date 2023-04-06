@@ -1,0 +1,16 @@
+body#tinymce.wp-editor,
+#main .front-matter,
+#main .chapter,
+#main .back-matter,
+#main .part {
+  @import "blockquotes";
+  @import "headings";
+  @import "hr";
+  @import "images";
+  @import "lists";
+  @import "paragraphs";
+  @import "summary";
+  @import "tables";
+  @import "textboxes";
+  @import "h5p_iframe";
+}
