@@ -22,13 +22,16 @@ jobs:
         with:
           script: |
             core.setFailed('Plugin version not set')
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
       - name: Create a .npmrc file for the github private repository
         run: |
           echo "${{ secrets.NPMRC }}" >> .npmrc
       - name: build
         run: |
-          npm i
-          npm run bundle
+          pnpm run bundle
       - uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.versionstrings.outputs.plugin_version}}
