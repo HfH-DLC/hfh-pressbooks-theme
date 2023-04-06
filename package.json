@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "description": "HfH Theme for Pressbooks",
   "devDependencies": {
-    "@hfh-dlc/hfh-styleguide": "^1.1.17",
+    "@hfh-dlc/hfh-styleguide": "^1.1.18",
     "autoprefixer": "^10.4.14",
     "dir-archiver": "^1.1.1",
     "postcss": "^8.4.21",
