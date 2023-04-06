@@ -7,3 +7,5 @@ vendor
 dist
 css
 languages/*-backup-*
+.npmrc
+bundle
