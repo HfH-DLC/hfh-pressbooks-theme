@@ -6,7 +6,7 @@ body {
   font-family: $font-family;
 }
 
-#page {
+* #page {
   .button,
   a.call-to-action,
   button,
@@ -309,4 +309,22 @@ body:not(.home) {
 .toc [class*="--empty"] > .toc__title__container {
   padding-left: 0.5rem;
   text-indent: 0;
+}
+
+.toc button svg {
+  margin: 0 auto;
+}
+
+.button:focus,
+.button.focus,
+button:focus,
+button.focus,
+input[type="submit"]:focus,
+input[type="submit"].focus,
+a.call-to-action:focus,
+a.call-to-action.focus {
+  box-shadow: none;
+  &:focus-visible {
+    outline: 2px solid var(--c-blue);
+  }
 }
