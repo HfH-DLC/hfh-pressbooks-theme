@@ -39,4 +39,4 @@ jobs:
           name: ${{ steps.versionstrings.outputs.plugin_version}}
           draft: false
           prerelease: false
-          files: ./dist/*.zip
+          files: ./bundle/*.zip
