@@ -23,3 +23,29 @@ body.home {
     @extend .hfh-h3;
   }
 }
+
+.post-password-form {
+  label {
+    @extend .hfh-label;
+  }
+
+  input[type="password"] {
+    display: block;
+    border: 2px solid var(--c-fantasy-dark);
+    font-family: var(--f-primary);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding: 0.875rem 1rem;
+
+    width: 100%;
+
+    &::placeholder {
+      color: var(--c-thunderbird-red);
+    }
+  }
+
+  input[type="submit"] {
+    @extend button, .hfh-button, .hfh-button--primary;
+    padding: 0.875rem 1.375rem 0.875rem 1.375rem;
+  }
+}
