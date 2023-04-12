@@ -1,40 +1,28 @@
-$black: #000;
-$fantasy-light: #fbf3f4;
-$fantasy-plain: #f2d1d3;
-$fantasy-dark: #d8757c;
-$gray-dark: #767676;
-$gray-light: #f4f4f4;
-$thunderbird-red: #be1925;
-$thunderbird-red-light: #e31826;
-$white: #fff;
 //---
 $off-black: #333;
-//---
-$thunderbird-red-alpha: rgba($thunderbird-red, 0.25);
-$fantasy-plain-alpha: rgba($fantasy-plain, 0.25);
 
 /**
 *   Set css vars for book.css
 **/
 
 :root {
-    --primary: #{$thunderbird-red};
-    --primary-dark: #{$thunderbird-red-light};
-    --primary-alpha: #{$thunderbird-red-alpha};
-    --primary-fg: #{$white};
-    --accent: #{$fantasy-plain};
-    --accent-alpha: #{$fantasy-plain-alpha};
-    --accent-dark: #{$fantasy-dark};
-    //--accent-fg: #{$white};
-    //--success: #070;
-    //--error: #d00;
-    //--warning: #e90;
-    --body-bg: #{$white};
-    //--body-bg-alt: #f6f6f6;
-    --body-text: #{$off-black};
-    --header-color: #{$black};
-    --header-bg: #{$gray-light};
-    --header-text:#{$off-black};
-    --footer-bg: #{$black};
-    --footer-text: #{$white};
+  --primary: var(--c-thunderbird-red);
+  --primary-dark: var(--c-thunderbird-red-light);
+  --primary-alpha: rgba(var(--c-thunderbird-red-alpha), 0.25);
+  --primary-fg: var(--c-white);
+  --accent: var(--c-fantasy-plain);
+  --accent-alpha: rgba(var(--c-fantasy-plain), 0.25);
+  --accent-dark: var(--c-$fantasy-dark);
+  //--accent-fg: #{$white};
+  //--success: #070;
+  //--error: #d00;
+  //--warning: #e90;
+  --body-bg: var(--c-white);
+  //--body-bg-alt: #f6f6f6;
+  --body-text: #{$off-black};
+  --header-color: var(--c-black);
+  --header-bg: var(--c-gray-light);
+  --header-text: #{$off-black};
+  --footer-bg: var(--c-black);
+  --footer-text: var(--c-white);
 }

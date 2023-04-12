@@ -1,9 +1,10 @@
 @import "/node_modules/@hfh-dlc/hfh-styleguide/dist/style";
 
-@import "global/fonts";
 @import "global/colors";
-@import "global/links";
-@import "global/headings";
-@import "global/footer";
 @import "global/buttons";
+@import "global/links";
 @import "content/index";
+
+body {
+  margin: 9px 10px;
+}
