@@ -1,6 +1,6 @@
 {
   "name": "hfh-pressbooks-theme",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "HfH Theme for Pressbooks",
   "devDependencies": {
     "@hfh-dlc/hfh-styleguide": "^1.1.20",
