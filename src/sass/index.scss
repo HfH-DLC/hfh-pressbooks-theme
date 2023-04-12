@@ -1,14 +1,56 @@
 @import "/node_modules/@hfh-dlc/hfh-styleguide/dist/style";
 
-@import "global/fonts";
 @import "global/colors";
-@import "global/links";
-@import "global/headings";
-@import "global/footer";
 @import "global/buttons";
-@import "content/index";
+@import "global/links";
+@import "global/footer";
+@import "global/toc";
 @import "global/search";
+@import "content/index";
 //import book overrides last
 @import "global/book";
 //print styles
 @import "global/print";
+
+.nav-reading .icon--svg {
+  display: inline-block;
+}
+
+#page .reading-header__title {
+  text-transform: none;
+}
+
+#page .reading-header__toc .reading-header__toc__title button {
+  text-transform: none;
+}
+
+#page #main .site-content a.call-to-action {
+  @extend button,
+    .hfh-button,
+    .hfh-button--primary,
+    .hfh-button--animated,
+    .hfh-button--icon-arrow;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.toc__toggle {
+  button#show {
+    @extend .hfh-button, .hfh-button--primary, .hfh-button--icon-plus;
+  }
+  button#hide {
+    @extend .hfh-button, .hfh-button--primary, .hfh-button--icon-minus;
+  }
+}
+
+.hfh-button.hfh-button--icon-minus {
+  &::before,
+  &::after {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M24 12H0' stroke='%23E74011' stroke-width='2'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+  }
+}

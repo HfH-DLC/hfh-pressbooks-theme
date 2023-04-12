@@ -1,24 +1,24 @@
-@import "global/colors";
-@import "global/fonts";
+@import "/node_modules/@hfh-dlc/hfh-styleguide/dist/style";
+
 html.h5p-iframe,
 html.h5p-iframe > body {
   .h5peditor .ui-dialog .h5p-joubelui-button,
   .h5peditor .h5p-joubelui-button,
   .h5p-joubelui-button {
-    background-color: $thunderbird-red;
+    background-color: var(--c-thunderbird-red);
     &:hover,
     &:focus {
-      background-color: $thunderbird-red-light;
+      background-color: var(--c-thunderbird-red-light);
     }
   }
   .h5p-joubelui-button:active {
     box-shadow: inset 0 4px 0px #7b0e16;
   }
   .joubel-simple-rounded-button {
-    background-color: $thunderbird-red;
+    background-color: var(--c-thunderbird-red);
     &:hover,
     &:focus {
-      background-color: $thunderbird-red-light;
+      background-color: var(--c-thunderbird-red-light);
     }
     &:active {
       box-shadow: inset 0 4px 0px #7b0e16;
@@ -28,32 +28,32 @@ html.h5p-iframe > body {
     }
   }
   .h5p-documentation-tool-page .page-help-text {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
     &:hover {
       text-decoration: underline;
     }
   }
   .progress-dot {
     &.current {
-      background: $thunderbird-red;
+      background: var(--c-thunderbird-red);
     }
     &.answered {
-      background: $fantasy-dark;
+      background: var(--c-fantasy-dark);
     }
   }
-  font-family: $font-family;
+  font-family: var(--f-primary);
   .h5p-joubelui-button {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   .h5p-text-input,
   .h5p-text-input-field .h5p-text-input-field-textfield {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   /*
     * Timeline
     */
   .vco-storyjs {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   .vco-storyjs .twitter,
   .vco-storyjs .vcard,
@@ -66,7 +66,7 @@ html.h5p-iframe > body {
   .vco-storyjs .time-interval div,
   .vco-storyjs .time-interval-major div,
   .vco-storyjs .nav-container {
-    font-family: $font-family !important;
+    font-family: var(--f-primary) !important;
   }
   .vco-storyjs h1.date,
   .vco-storyjs h2.date,
@@ -74,7 +74,7 @@ html.h5p-iframe > body {
   .vco-storyjs h4.date,
   .vco-storyjs h5.date,
   .vco-storyjs h6.date {
-    font-family: $font-family !important;
+    font-family: var(--f-primary) !important;
   }
   .vco-storyjs .timenav h1,
   .vco-storyjs .flag-content h1,
@@ -94,13 +94,13 @@ html.h5p-iframe > body {
   .vco-storyjs .timenav h6,
   .vco-storyjs .flag-content h6,
   .vco-storyjs .era h6 {
-    font-family: $font-family !important;
+    font-family: var(--f-primary) !important;
   }
   .vco-storyjs p,
   .vco-storyjs blockquote,
   .vco-storyjs blockquote p,
   .vco-storyjs .twitter blockquote p {
-    font-family: $font-family !important;
+    font-family: var(--f-primary) !important;
   }
   .vco-storyjs .vco-feature h1,
   .vco-storyjs .vco-feature h2,
@@ -108,16 +108,16 @@ html.h5p-iframe > body {
   .vco-storyjs .vco-feature h4,
   .vco-storyjs .vco-feature h5,
   .vco-storyjs .vco-feature h6 {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   .timeline-tooltip {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   .vco-storyjs h3 .active,
   .vco-storyjs h4 .active,
   .vco-storyjs h5 .active,
   .vco-storyjs h6 .active {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-notouch
     .vco-slider
@@ -129,7 +129,7 @@ html.h5p-iframe > body {
     .wikipedia
     h4
     a:hover {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-slider
     .slider-item
@@ -141,7 +141,7 @@ html.h5p-iframe > body {
     .map
     .map-attribution
     .attribution-text {
-    font-family: $font-family;
+    font-family: var(--f-primary);
   }
   .vco-slider
     .slider-item
@@ -149,19 +149,19 @@ html.h5p-iframe > body {
     .content-container
     .googleplus
     .proflinkPrefix {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-storyjs a {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-storyjs a:hover {
-    color: $thunderbird-red-light;
+    color: var(--c-thunderbird-red-light);
     text-decoration: underline;
   }
   .vco-notouch .vco-navigation .vco-toolbar .zoom-in:hover,
   .vco-notouch .vco-navigation .vco-toolbar .zoom-out:hover,
   .vco-notouch .vco-navigation .vco-toolbar .back-home:hover {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-notouch
     .vco-navigation
@@ -179,16 +179,16 @@ html.h5p-iframe > body {
     .flag-small
     .flag-content
     h3 {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-timeline .vco-navigation .timenav-background .timenav-line {
-    background-color: $thunderbird-red;
+    background-color: var(--c-thunderbird-red);
   }
   .vco-timeline .vco-navigation .timenav .content .marker.active .dot {
-    background: $thunderbird-red;
+    background: var(--c-thunderbird-red);
   }
   .vco-timeline .vco-navigation .timenav .content .marker.active .line {
-    background: $thunderbird-red;
+    background: var(--c-thunderbird-red);
   }
   .vco-timeline
     .vco-navigation
@@ -197,7 +197,7 @@ html.h5p-iframe > body {
     .marker.active
     .line
     .event-line {
-    background: $thunderbird-red;
+    background: var(--c-thunderbird-red);
   }
   .vco-timeline
     .vco-navigation
@@ -215,10 +215,10 @@ html.h5p-iframe > body {
     .flag-small
     .flag-content
     h3 {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
   .vco-timeline .vco-navigation .timenav .content .marker .line .event-line {
-    background: $thunderbird-red;
+    background: var(--c-thunderbird-red);
   }
   .vco-timeline .vco-navigation .timenav .content .era1 div {
     background: #c40;
@@ -282,19 +282,19 @@ html.h5p-iframe > body {
   }
   //Question
   .h5p-question-feedback {
-    color: $thunderbird-red;
+    color: var(--c-thunderbird-red);
   }
 
   .h5p-advent-calendar a {
     &,
     &:visited,
     &:active {
-      color: $thunderbird-red;
+      color: var(--c-thunderbird-red);
       text-decoration: none;
     }
     &:hover,
     &:focus-visible {
-      color: $thunderbird-red-light;
+      color: var(--c-thunderbird-red-light);
       text-decoration: underline;
     }
   }

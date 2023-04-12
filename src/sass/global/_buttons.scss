@@ -1,108 +1,21 @@
-#main {
-    .button,
-    a.call-to-action,
-    button,
-    input[type=submit] {
-        text-transform: none;
+.button,
+a.call-to-action,
+button,
+input[type="submit"] {
+  font-family: var(--f-primary);
+}
+
+.button,
+button,
+input[type="submit"],
+a.call-to-action {
+  border-radius: 0;
+
+  &.focus,
+  &:focus {
+    box-shadow: none;
+    &:focus-visible {
+      outline: 2px solid var(--c-blue);
     }
-    input[type='submit'] {
-        cursor: pointer;
-        border: 0;
-        position: relative;
-        padding-top: 16px;
-        padding-right: 24px;
-        padding-bottom: 16px;
-        padding-left: 24px;
-        transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
-        font-size: 1rem;
-        line-height: 24px;
-        color: $white;
-        font-weight: bold;
-        text-align: left;
-        appearance: none;
-        background: $black;
-        &:hover {
-            border: 0;
-            color: #fff;
-            background: $thunderbird-red;
-            text-decoration: none;
-            outline: none;
-            box-shadow: none;
-        }
-    }
-    a.call-to-action {
-        cursor: pointer;
-        border: 0;
-        position: relative;
-        margin: 0;
-        padding-top: 16px;
-        padding-right: 70px;
-        padding-bottom: 16px;
-        padding-left: 24px;
-        transition: background-color 0.25s ease 0s, color 0.25s ease 0s, padding-left 0.25s ease 0s, padding-right 0.25s ease 0s;
-        font-size: 1rem;
-        line-height: 24px;
-        color: $white;
-        font-weight: bold;
-        text-align: left;
-        appearance: none;
-        background: $black;
-        &::before {
-            content: "";
-            display: block;
-            width: 32px;
-            height: 14px;
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            margin-top: -7px;
-            transition: transform 0.25s ease 0s, opacity 0.25s ease 0s;
-            left: 24px;
-            transform: translateX(-100%) translateZ(0);
-            opacity: 0;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width='32px'%20height='14px'%20viewBox='0%200%2032%2014'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%20transform='translate(0.000000,%201.000000)'%20fill='none'%20fill-rule='evenodd'%20stroke='%23FFFFFF'%20stroke-width='2'%3E%3Cline%20x1='30'%20y1='6'%20x2='-1.19015908e-13'%20y2='6'%3E%3C/line%3E%3Cpolyline%20points='24.3333333%200%2030%206%2024.3333333%2012'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
-        }
-        &::after {
-            content: "";
-            display: block;
-            width: 32px;
-            height: 14px;
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            margin-top: -7px;
-            transition: transform 0.25s ease 0s, opacity 0.25s ease 0s;
-            font-size: 1rem;
-            line-height: 24px;
-            color: #fff;
-            font-weight: bold;
-            text-align: left;
-            cursor: pointer;
-            right: 24px;
-            transform: translateX(0) translateZ(0);
-            opacity: 1;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width='32px'%20height='14px'%20viewBox='0%200%2032%2014'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%20transform='translate(0.000000,%201.000000)'%20fill='none'%20fill-rule='evenodd'%20stroke='%23e31826'%20stroke-width='2'%3E%3Cline%20x1='30'%20y1='6'%20x2='-1.19015908e-13'%20y2='6'%3E%3C/line%3E%3Cpolyline%20points='24.3333333%200%2030%206%2024.3333333%2012'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E");
-        }
-        &:hover,
-        &:focus {
-            border: 0;
-            padding-left: 70px;
-            padding-right: 24px;
-            color: #fff;
-            background: $thunderbird-red;
-            text-decoration: none;
-            outline: none;
-            box-shadow: none;
-            &::before {
-                transform: translateX(0) translateZ(0);
-                opacity: 1;
-            }
-            &::after {
-                transform: translateX(100%) translateZ(0);
-                opacity: 0;
-            }
-        }
-    }
+  }
 }

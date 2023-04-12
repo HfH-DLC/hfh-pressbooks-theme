@@ -1,0 +1,37 @@
+.toc,
+.toc ol {
+  font-family: var(--f-primary);
+}
+.toc__toggle button,
+.toc__title__container button {
+  cursor: pointer;
+  text-transform: none;
+}
+.toc__part > .toc__title__container,
+.toc__part > .toc__title {
+  font-weight: normal;
+}
+
+.toc__title {
+  display: inline;
+  margin-top: 0;
+}
+
+.toc .toc__title__container {
+  hyphens: auto;
+}
+
+.toc [class*="--full"] > .toc__title__container > p > span,
+.toc [class*="--full"] > .toc__title__container > span {
+  padding-left: 0.5rem;
+  text-indent: 0;
+}
+
+.toc [class*="--empty"] > .toc__title__container {
+  padding-left: 0.5rem;
+  text-indent: 0;
+}
+
+.toc button svg {
+  margin: 0 auto;
+}

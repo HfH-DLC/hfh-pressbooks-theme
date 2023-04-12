@@ -1,16 +1,32 @@
-h1+h2 {
-    margin-top: 2em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left;
 }
 
-h2+h3 {
-    margin-top: 1.5em;
+h1 + h2 {
+  margin-top: 2em;
 }
 
-h3+h4 {
-    margin-top: 1.3em;
+h2 + h3 {
+  margin-top: 1.5em;
 }
 
-h4+h5,
-h5+h6 {
-    margin-top: 1em;
+h3 + h4 {
+  margin-top: 1.3em;
+}
+
+h4 + h5,
+h5 + h6 {
+  margin-top: 1em;
+}
+
+h4 {
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  font-size: 1.125rem;
 }

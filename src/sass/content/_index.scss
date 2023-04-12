@@ -3,7 +3,6 @@ body#tinymce.wp-editor,
 #main .chapter,
 #main .back-matter,
 #main .part {
-  @import "blockquotes";
   @import "headings";
   @import "hr";
   @import "images";
@@ -13,4 +12,17 @@ body#tinymce.wp-editor,
   @import "tables";
   @import "textboxes";
   @import "h5p_iframe";
+}
+
+body#tinymce.wp-editor,
+:where(body:not(.home)) #main .site-content {
+  @extend .hfh-content;
+
+  a {
+    font-weight: normal;
+  }
+
+  h1 {
+    @extend .hfh-h1;
+  }
 }

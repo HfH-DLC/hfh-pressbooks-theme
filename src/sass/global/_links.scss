@@ -1,6 +1,12 @@
-.single #page #main .site-content,
-body#tinymce.wp-editor {
-  a {
-    @extend a, .hfh-link, .hfh-link--default;
+a {
+  @extend a, .hfh-link, .hfh-link--default;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.block-info a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
