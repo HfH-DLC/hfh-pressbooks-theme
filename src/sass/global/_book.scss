@@ -2,7 +2,7 @@
 *  book.css overrides
 **/
 
-* #page {
+#page {
   .block-reading-meta {
     font-family: var(--f-primary);
   }
@@ -249,7 +249,7 @@
     padding-bottom: 1px;
     font-weight: bold;
     font-style: normal;
-    text-transform: none;
+    text-transform: uppercase;
     color: var(--c-thunderbird-red);
     font-size: 1rem;
     line-height: 1.6666666667;
