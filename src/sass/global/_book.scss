@@ -276,3 +276,11 @@ body:not(.home) {
     padding-inline: 1rem;
   }
 }
+
+.nav-reading .icon--svg {
+  display: inline-block;
+}
+
+#page .reading-header__title {
+  text-transform: none;
+}

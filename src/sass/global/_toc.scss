@@ -35,3 +35,16 @@
 .toc button svg {
   margin: 0 auto;
 }
+
+.toc__toggle {
+  button#show {
+    @extend .hfh-button, .hfh-button--primary, .hfh-button--icon-plus;
+  }
+  button#hide {
+    @extend .hfh-button, .hfh-button--primary, .hfh-button--icon-minus;
+  }
+}
+
+#page .reading-header__toc .reading-header__toc__title button {
+  text-transform: none;
+}
