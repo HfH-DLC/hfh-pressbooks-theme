@@ -1,4 +1,13 @@
 table {
   border: 0;
   table-layout: auto;
+
+  caption {
+    margin-bottom: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.1em;
+    color: unset;
+    caption-side: top;
+  }
 }
