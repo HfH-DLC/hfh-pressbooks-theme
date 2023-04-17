@@ -16,6 +16,7 @@
   @media screen and (max-width: 59.975rem) {
     .js-header-nav a {
       font-family: var(--f-primary);
+      color: var(--c-white);
     }
   }
   section.front-matter header [data-type="author"],
@@ -230,6 +231,7 @@
   }
   .nav-reading {
     z-index: 1;
+    line-height: 1.5;
     .nav-reading__up {
       cursor: pointer;
     }
