@@ -10,7 +10,7 @@
     "postcss-cli": "^9.0.1"
   },
   "scripts": {
-    "watch": "vite build --watch",
+    "dev": "vite build --watch",
     "build": "vite build",
     "archive": "mkdir -p bundle && rm -rf bundle/* && dir-archiver --src . --dest ./bundle/hfh-pressbooks-theme.zip --exclude bundle .DS_Store .git .gitattributes .github .gitignore node_modules package-lock.json package.json pnpm-lock.yaml vite.config.js .npmrc",
     "bundle": "pnpm run build && pnpm run archive"
