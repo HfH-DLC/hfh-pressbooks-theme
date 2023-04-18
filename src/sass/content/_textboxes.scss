@@ -61,7 +61,17 @@
     opacity: 0.5;
   }
 
+  li {
+    &::marker {
+      color: var(--textbox-color);
+    }
+  }
+
   details {
     border-color: var(--textbox-color, var(--c-fantasy-plain));
+    &:hover > summary,
+    &[open] > summary {
+      color: var(--textbox-color);
+    }
   }
 }
