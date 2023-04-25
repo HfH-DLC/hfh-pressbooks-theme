@@ -1,6 +1,74 @@
 table {
   border: 0;
   table-layout: auto;
+  font-size: 1rem;
+
+  // display: block;
+  // overflow-x: auto;
+
+  // background-image: linear-gradient(to right, white, white),
+  //   linear-gradient(to right, white, white),
+  //   linear-gradient(to right, rgba(0, 0, 20, 0.25), rgba(255, 255, 255, 0)),
+  //   linear-gradient(to left, rgba(0, 0, 20, 0.25), rgba(255, 255, 255, 0));
+  // /* Shadows */
+  // /* Shadow covers */
+  // background-position: left center, right center, left center, right center;
+  // background-repeat: no-repeat;
+  // background-color: white;
+  // background-size: 10px 100%, 10px 100%, 5px 100%, 5px 100%;
+  // background-attachment: local, local, scroll, scroll;
+
+  // @media screen and (min-width: 60rem) {
+  //   display: table;
+  // }
+
+  //Ignore inline styles
+  // &,
+  // thead,
+  // tbody,
+  // tr,
+  // td,
+  // th {
+  //   height: auto !important;
+  // }
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  thead {
+    > tr > td {
+      text-transform: uppercase;
+      color: var(--c-thunderbird-red);
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+
+  // Remove top border of first body row if there was no thead.
+  tbody:first-child {
+    tr:first-child {
+      border-top: none;
+    }
+  }
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+    &:empty {
+      display: none;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   caption {
     margin-bottom: 0.5em;

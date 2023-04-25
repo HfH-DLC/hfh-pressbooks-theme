@@ -9,7 +9,7 @@
 
 if (!defined('HFH_PRESSBOOKS_THEME_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.14');
+	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.15');
 }
 
 require_once 'inc/class-book.php';
@@ -120,18 +120,6 @@ function hfh_pressbooks_theme_remove_h1($args)
 }
 add_filter('tiny_mce_before_init', 'hfh_pressbooks_theme_remove_h1');
 
-
-function custom_excerpt_more($more)
-{
-	return ' [&hellip;]';
-}
-add_filter('excerpt_more', 'custom_excerpt_more', 11);
-
-function hfh_pressbooks_theme_remove_protected_text()
-{
-	return '%s';
-}
-
 add_filter('protected_title_format', 'hfh_pressbooks_theme_remove_protected_text');
 
 /**
@@ -145,4 +133,22 @@ function hfh_tag_subsections($content, $id)
 {
 	$tagged_content = \HfH_Pressbooks_Theme\Book::tagSubsections($content, $id);
 	return ($tagged_content === false) ? $content : $tagged_content;
+}
+
+/**
+ * Changes the "Read more" text in excerpts to […]
+ * Used when displaying search results. 
+ */
+function custom_excerpt_more($more)
+{
+	return ' [&hellip;]';
+}
+add_filter('excerpt_more', 'custom_excerpt_more', 11);
+
+/**
+ * Changes the title format of a protected post to just the title.
+ */
+function hfh_pressbooks_theme_remove_protected_text()
+{
+	return '%s';
 }

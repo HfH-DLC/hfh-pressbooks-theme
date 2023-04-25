@@ -7,4 +7,8 @@
 
 body {
   margin: 9px 10px;
+
+  &:focus-visible {
+    outline: none;
+  }
 }

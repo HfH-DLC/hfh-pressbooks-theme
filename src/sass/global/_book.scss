@@ -2,6 +2,12 @@
 *  book.css overrides
 **/
 
+@media screen and (min-width: 40rem) {
+  #content {
+    width: var(--reading-width, 40em);
+  }
+}
+
 #page {
   .block-reading-meta {
     font-family: var(--f-primary);
