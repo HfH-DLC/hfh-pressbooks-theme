@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@hfh-dlc/hfh-styleguide': ^1.1.22
+  '@hfh-dlc/hfh-styleguide': ^1.1.25
   autoprefixer: ^10.4.14
   dir-archiver: ^1.1.1
   postcss: ^8.4.21
@@ -14,7 +14,7 @@ dependencies:
   vite: 4.2.1_sass@1.62.0
 
 devDependencies:
-  '@hfh-dlc/hfh-styleguide': 1.1.22
+  '@hfh-dlc/hfh-styleguide': 1.1.25
   autoprefixer: 10.4.14_postcss@8.4.21
   dir-archiver: 1.2.0
   postcss: 8.4.21
@@ -220,8 +220,8 @@ packages:
     dev: false
     optional: true
 
-  /@hfh-dlc/hfh-styleguide/1.1.22:
-    resolution: {integrity: sha512-pqcO5Vn3v2fjGSXO/FWGy1HVKGaLYbEnqs/57luyYTN2+u8aPf8hJ/obMnzXQsNFPCsGZV8fBl1aA0LTNNklRg==, tarball: download/@hfh-dlc/hfh-styleguide/1.1.22/370218659e0cec6cb40b86f8a2b113e33d9cddcb}
+  /@hfh-dlc/hfh-styleguide/1.1.25:
+    resolution: {integrity: sha512-+rhinQPiVR+1y9EH46J4fus8F+Su5saXgECaURcHG7CQ/H55J7QIBHMdqGyh9gPX7M6Mddoe4q1EpJWV+ucaag==, tarball: download/@hfh-dlc/hfh-styleguide/1.1.25/fb3c83c9bc3e37c40f9da2493e46b3087f471c11}
     peerDependencies:
       vue: ^3.0.4
     dependencies:
