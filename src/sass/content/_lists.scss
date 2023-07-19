@@ -1,6 +1,6 @@
 ol,
 ul {
-  line-height: 1.25rem;
+  line-height: 1.375rem;
   margin-top: 0.7em;
   margin-bottom: 1em;
 
@@ -13,7 +13,6 @@ ul {
   }
   & > li > ul,
   & > li > ol {
-    line-height: 1.25rem;
     margin-top: 0.35em;
     margin-bottom: 0.5em;
     > li {
@@ -21,7 +20,6 @@ ul {
     }
     & > li ul,
     & > li ol {
-      line-height: 1.25rem;
       margin-top: 0;
       margin-bottom: 0.25em;
       > li {
