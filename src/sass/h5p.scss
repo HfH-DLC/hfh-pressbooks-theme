@@ -50,6 +50,12 @@ html.h5p-iframe > body {
     font-family: var(--f-primary);
   }
   /*
+  * Crossword
+  */
+  .h5p-crossword-grid {
+    border-collapse: separate;
+  }
+  /*
     * Timeline
     */
   .vco-storyjs {
