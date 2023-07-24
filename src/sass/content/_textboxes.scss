@@ -16,8 +16,6 @@
 .textbox--exercises.bcc-box,
 .textbox.textbox--examples,
 .textbox--examples.bcc-box {
-  border-width: 2px;
-  border-radius: 0;
   .textbox__header {
     border-radius: 0;
     a {
@@ -32,46 +30,47 @@
 }
 
 .textbox.textbox--key-takeaways {
-  --textbox-color: var(--textbox-takeaways);
+  --c-textbox-color: var(--c-textbox-takeaways);
 }
 
 .textbox.textbox--examples {
-  --textbox-color: var(--textbox-examples);
+  --c-textbox-color: var(--c-textbox-examples);
 }
 
 .textbox.textbox--learning-objectives {
-  --textbox-color: var(--textbox-objectives);
+  --c-textbox-color: var(--c-textbox-objectives);
 }
 
 .textbox.textbox--exercises {
-  --textbox-color: var(--textbox-exercises);
+  --c-textbox-color: var(--c-textbox-exercises);
 }
 
 .textbox {
-  --textbox-color: initial;
-  border-color: var(--textbox-color);
+  border-width: 2px;
+  border-radius: 0;
+  border-color: var(--c-textbox-color, var(--c-black));
   a {
-    color: var(--textbox-color);
+    color: var(--c-textbox-color, var(--c-thunderbird-red));
     &:hover {
-      color: var(--textbox-color);
+      color: var(--c-textbox-color, var(--c-thunderbird-red));
     }
   }
   hr {
-    border-color: var(--textbox-color);
+    border-color: var(--c-textbox-color, var(--c-fantasy-plain));
     opacity: 0.5;
   }
 
   li {
     &::marker {
-      color: var(--textbox-color);
+      color: var(--c-textbox-color, var(--c-thunderbird-red));
     }
   }
 
   details {
-    border-color: var(--textbox-color, var(--c-fantasy-plain));
+    border-color: var(--c-textbox-color, var(--c-fantasy-plain));
     &:hover > summary,
     &[open] > summary {
-      color: var(--textbox-color);
+      color: var(--c-textbox-color);
     }
   }
 }
