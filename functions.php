@@ -9,7 +9,7 @@
 
 if (!defined('HFH_PRESSBOOKS_THEME_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.19');
+	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.20');
 }
 
 require_once 'inc/class-book.php';
@@ -30,15 +30,7 @@ add_action('after_setup_theme', 'hfh_pressbooks_theme_theme_setup');
 function hfh_pressbooks_theme_enqueue_scripts()
 {
 	wp_enqueue_style('hfh-pressbook-theme-style-index', get_stylesheet_directory_uri() . '/dist/main.css', array(), HFH_PRESSBOOKS_THEME_VERSION);
-	$options    = get_option('pressbooks_theme_options_global');
-	$custom_css = "
-                :root {
-                        --textbox-examples: {$options['edu_textbox_examples_header_background']};
-						--textbox-objectives: {$options['edu_textbox_objectives_header_background']};
-						--textbox-exercises: {$options['edu_textbox_exercises_header_background']};
-						--textbox-takeaways: {$options['edu_textbox_takeaways_header_background']};
-                }";
-	wp_add_inline_style('hfh-pressbook-theme-style-index', $custom_css);
+	wp_add_inline_style('hfh-pressbook-theme-style-index', hfh_pressbooks_theme_get_textbox_css());
 
 	if (!is_front_page()) {
 		$web_options = get_option('pressbooks_theme_options_web');
@@ -62,6 +54,28 @@ function hfh_pressbooks_theme_add_editor_styles()
 
 add_action('after_setup_theme', 'hfh_pressbooks_theme_add_editor_styles');
 
+function hfh_pressbooks_theme_tiny_mce_before_init($settings)
+{
+	$styles = hfh_pressbooks_theme_get_textbox_css();
+	if (!isset($settings['content_style'])) {
+		$settings['content_style'] = $styles . ' ';
+	} else {
+		$settings['content_style'] .= ' ' . $styles . ' ';
+	}
+	var_dump($settings['content_style']);
+	return $settings;
+}
+
+add_filter('tiny_mce_before_init', 'hfh_pressbooks_theme_tiny_mce_before_init');
+
+/**
+ * Returns the css properties for the configured textbox colors
+ */
+function hfh_pressbooks_theme_get_textbox_css()
+{
+	$options = get_option('pressbooks_theme_options_global');
+	return ":root { --c-textbox-examples: {$options['edu_textbox_examples_header_background']}; --c-textbox-objectives: {$options['edu_textbox_objectives_header_background']}; --c-textbox-exercises: {$options['edu_textbox_exercises_header_background']}; --c-textbox-takeaways: {$options['edu_textbox_takeaways_header_background']}; }";
+}
 
 /**
  * Changes default colors for the different textboxes
