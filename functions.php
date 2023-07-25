@@ -62,7 +62,6 @@ function hfh_pressbooks_theme_tiny_mce_before_init($settings)
 	} else {
 		$settings['content_style'] .= ' ' . $styles . ' ';
 	}
-	var_dump($settings['content_style']);
 	return $settings;
 }
 
