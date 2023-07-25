@@ -9,7 +9,7 @@
 
 if (!defined('HFH_PRESSBOOKS_THEME_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.20');
+	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.21');
 }
 
 require_once 'inc/class-book.php';
@@ -62,7 +62,6 @@ function hfh_pressbooks_theme_tiny_mce_before_init($settings)
 	} else {
 		$settings['content_style'] .= ' ' . $styles . ' ';
 	}
-	var_dump($settings['content_style']);
 	return $settings;
 }
 
