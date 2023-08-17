@@ -1,5 +1,13 @@
 @import "/node_modules/@hfh-dlc/hfh-styleguide/dist/style";
 
+html.h5p-iframe {
+  *,
+  ::before,
+  ::after {
+    box-sizing: content-box;
+  }
+}
+
 html.h5p-iframe,
 html.h5p-iframe > body {
   .h5peditor .ui-dialog .h5p-joubelui-button,
