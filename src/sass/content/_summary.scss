@@ -3,6 +3,13 @@ details {
   margin-top: 2rem;
   margin-bottom: 2rem;
 
+  h2 {
+    font-family: var(--f-primary);
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 0;
+  }
+
   summary {
     @extend .hfh-accordion__toggle;
   }
