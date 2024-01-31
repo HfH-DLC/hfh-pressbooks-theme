@@ -18,7 +18,7 @@ body#tinymce.wp-editor,
 :where(body:not(.home)) #main .site-content {
   @extend .hfh-content;
 
-  a {
+  a:not(.hfh-button) {
     font-weight: normal;
   }
 
