@@ -1,5 +1,6 @@
 pre:has(> code) {
   background-color: var(--c-gray-darkest);
+  border: 1px solid var(--c-gray-darkest);
   color: white;
   padding: 1rem;
 }
@@ -13,4 +14,8 @@ pre > code {
   font-size: 88%;
   font-family: monospace;
   line-height: inherit;
+  border: 1px solid var(--c-gray-darkest);
+  background-color: var(--c-gray-light);
+  padding-inline: 4px;
+  padding-block: 1px;
 }
