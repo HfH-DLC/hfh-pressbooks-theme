@@ -12,6 +12,7 @@ body #main .part {
   @import "tables";
   @import "textboxes";
   @import "h5p_iframe";
+  @import "code";
 }
 
 body#tinymce.wp-editor,
