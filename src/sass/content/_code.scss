@@ -8,3 +8,9 @@ pre > code {
   font-size: 1rem;
   font-family: monospace;
 }
+
+:not(pre) > code {
+  font-size: 88%;
+  font-family: monospace;
+  line-height: inherit;
+}
