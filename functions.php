@@ -9,7 +9,7 @@
 
 if (!defined('HFH_PRESSBOOKS_THEME_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.26');
+	define('HFH_PRESSBOOKS_THEME_VERSION', '1.0.27');
 }
 
 require_once 'inc/class-book.php';

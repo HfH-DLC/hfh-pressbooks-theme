@@ -1,16 +1,21 @@
 pre:has(> code) {
   background-color: var(--c-gray-darkest);
-  color: white;
+  border: 1px solid var(--c-gray-darkest);
   padding: 1rem;
 }
 
 pre > code {
   font-size: 1rem;
   font-family: monospace;
+  color: white;
 }
 
 :not(pre) > code {
   font-size: 88%;
   font-family: monospace;
   line-height: inherit;
+  border: 1px solid var(--c-gray-darkest);
+  background-color: var(--c-gray-light);
+  padding-inline: 4px;
+  padding-block: 1px;
 }
